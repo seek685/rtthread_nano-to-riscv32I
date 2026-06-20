@@ -15,7 +15,11 @@
 
 # ============== 工具链 ==============
 
-CROSS_COMPILE ?= riscv32-unknown-elf-
+# 工具链路径（修改为你自己的安装目录）
+TOOLCHAIN_PATH ?= /d/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin
+export PATH := $(TOOLCHAIN_PATH):$(PATH)
+
+CROSS_COMPILE ?= riscv-none-elf-
 
 CC      = $(CROSS_COMPILE)gcc
 AS      = $(CROSS_COMPILE)gcc
@@ -31,7 +35,7 @@ SIZE    = $(CROSS_COMPILE)size
 #   rv32im     - 基础整数 + 乘除法
 #   rv32imac   - 基础整数 + 乘除法 + 原子操作 + 压缩指令
 #   rv32imafc  - 全功能（含单精度浮点）
-ARCH_FLAGS  = -march=rv32imac -mabi=ilp32
+ARCH_FLAGS  = -march=rv32imac_zicsr -mabi=ilp32
 
 # 禁用栈溢出保护（裸机程序不需要）
 SSP_FLAGS   = -fno-stack-protector
@@ -41,7 +45,9 @@ SSP_FLAGS   = -fno-stack-protector
 INC_DIRS    = -I include \
               -I libcpu \
               -I bsp \
-              -I applications
+              -I applications \
+              -I finsh \
+              -I device
 
 CFLAGS      = $(ARCH_FLAGS) $(SSP_FLAGS) \
               -Wall -Wextra \
@@ -88,8 +94,17 @@ C_SRC      += src/clock.c \
               src/thread.c \
               src/timer.c
 
+# 设备框架
+C_SRC      += device/device.c
+
 # 板级支持包
 C_SRC      += bsp/board.c
+
+# FinSH 命令行
+C_SRC      += finsh/shell.c \
+              finsh/cmd.c \
+			  finsh/finsh_port.c \
+              finsh/msh.c
 
 # 应用程序源文件
 C_SRC      += applications/main.c

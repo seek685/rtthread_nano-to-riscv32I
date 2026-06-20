@@ -9,7 +9,7 @@ ENTRY(_start)
 MEMORY
 {
     /* 所有段都在 RAM 中（无 Flash 设计） */
-    RAM (rwx) : ORIGIN = 0x00000000, LENGTH = 64K
+    RAM (rwx) : ORIGIN = 0x80000000, LENGTH = 64K
 }
 
 _stack_size = 0x2000;             /* 系统主栈大小 8KB   */
@@ -21,8 +21,9 @@ SECTIONS
 
     /* ---- 代码段 ---- */
     .text : ALIGN(4) {
-        KEEP(*(.text.init))       /* 启动代码（start.S）  */
-        *(.text .text.*)          /* 应用程序和内核代码    */
+        KEEP(*(.text.init))       /* 启动代码（start.S）        */
+        KEEP(*(.text.trap))       /* trap 入口（trap_entry.S）  */
+        *(.text .text.*)          /* 应用程序和内核代码          */
 
         /* RT-Thread 自动初始化段 */
         . = ALIGN(4);
@@ -30,7 +31,15 @@ SECTIONS
         KEEP(*(SORT(.rti_fn*)))
         __rt_init_end = .;
 
-        /* RT-Thread Finsh/MSH 组件符号表（如开启了控制台） */
+
+    } > RAM
+
+    /* ---- 只读数据段 ---- */
+    .rodata : ALIGN(4) {
+        *(.rodata .rodata.*)
+        *(.srodata .srodata.*)    /* RISC-V 小只读数据段 */
+
+         /* RT-Thread Finsh/MSH 组件符号表（如开启了控制台） */
         . = ALIGN(4);
         __fsymtab_start = .;
         KEEP(*(FSymTab))
@@ -40,12 +49,6 @@ SECTIONS
         __vsymtab_start = .;
         KEEP(*(VSymTab))
         __vsymtab_end = .;
-    } > RAM
-
-    /* ---- 只读数据段 ---- */
-    .rodata : ALIGN(4) {
-        *(.rodata .rodata.*)
-        *(.srodata .srodata.*)    /* RISC-V 小只读数据段 */
     } > RAM
 
     /* ---- 已初始化数据段 ---- */

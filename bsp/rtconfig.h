@@ -18,12 +18,12 @@
 /* ============== 内存管理 ============== */
 
 #define RT_USING_HEAP                     /* 使能动态堆内存 (rt_malloc)     */
-/* #define RT_USING_SMALL_MEM */           /* 小内存分配算法                 */
+#define RT_USING_SMALL_MEM                 /* 小内存分配算法                 */
 /* #define RT_USING_SLAB */                /* slab 内存分配算法              */
 
 /* ============== IPC 功能（按需开启以减小体积） ============== */
 
-/* #define RT_USING_SEMAPHORE */
+#define RT_USING_SEMAPHORE                 /* 信号量 —— 内存管理需要 */
 /* #define RT_USING_MUTEX */
 /* #define RT_USING_EVENT */
 /* #define RT_USING_MAILBOX */
@@ -31,8 +31,17 @@
 
 /* ============== 设备与控制台 ============== */
 
-/* #define RT_USING_DEVICE */
-/* #define RT_USING_CONSOLE */
+#define RT_USING_DEVICE                     /* 设备框架 —— finsh 需要 */
+#define RT_USING_CONSOLE                    /* 控制台输出 */
+#define RT_CONSOLEBUF_SIZE           256     /* 控制台缓冲区大小 */
+
+/* ============== FinSH 命令行 ============== */
+
+#define RT_USING_FINSH                      /* 开启 FinSH 命令行 Shell */
+/* #define FINSH_USING_SYMTAB */            /* 符号表支持     */
+/* #define FINSH_USING_MSH */               /* MSH 模块 Shell */
+/* #define FINSH_USING_HISTORY */           /* 命令历史       */
+/* #define FINSH_USING_DESCRIPTION */       /* 命令描述信息   */
 
 /* ============== 组件初始化 ============== */
 
@@ -45,7 +54,7 @@
 /* ============== 钩子与调试 ============== */
 
 /* #define RT_USING_HOOK */
-/* #define RT_DEBUG */
+#define RT_DEBUG
 
 /* ============== 架构: RISC-V 32 位 ============== */
 

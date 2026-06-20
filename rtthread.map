@@ -1,0 +1,1733 @@
+Archive member included to satisfy reference by file (symbol)
+
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+                              finsh/shell.o (strcat)
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+                              finsh/cmd.o (strncmp)
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+                              finsh/shell.o (strncpy)
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
+                              finsh/shell.o (memset)
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+                              finsh/cmd.o (memcpy)
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+                              finsh/shell.o (strlen)
+D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+                              finsh/shell.o (strcpy)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 start.o
+ .data          0x00000000        0x0 start.o
+ .bss           0x00000000        0x0 start.o
+ .data          0x00000000        0x0 libcpu/context_gcc.o
+ .bss           0x00000000        0x0 libcpu/context_gcc.o
+ .text          0x00000000        0x0 libcpu/trap_entry.o
+ .data          0x00000000        0x0 libcpu/trap_entry.o
+ .bss           0x00000000        0x0 libcpu/trap_entry.o
+ .text          0x00000000        0x0 libcpu/cpuport.o
+ .data          0x00000000        0x0 libcpu/cpuport.o
+ .bss           0x00000000        0x0 libcpu/cpuport.o
+ .text          0x00000000        0x0 libcpu/interrupt.o
+ .data          0x00000000        0x0 libcpu/interrupt.o
+ .bss           0x00000000        0x0 libcpu/interrupt.o
+ .text.rt_hw_interrupt_mask
+                0x00000000       0x24 libcpu/interrupt.o
+ .text.rt_hw_interrupt_umask
+                0x00000000       0x2c libcpu/interrupt.o
+ .text.rt_hw_interrupt_install
+                0x00000000       0x1e libcpu/interrupt.o
+ .text          0x00000000        0x0 src/clock.o
+ .data          0x00000000        0x0 src/clock.o
+ .bss           0x00000000        0x0 src/clock.o
+ .text.rt_system_tick_init
+                0x00000000        0x2 src/clock.o
+ .text.rt_tick_set
+                0x00000000       0x26 src/clock.o
+ .text          0x00000000        0x0 src/components.o
+ .data          0x00000000        0x0 src/components.o
+ .bss           0x00000000        0x0 src/components.o
+ .text.rt_components_board_init
+                0x00000000       0x2e src/components.o
+ .text.entry    0x00000000        0x8 src/components.o
+ .text          0x00000000        0x0 src/cpu.o
+ .data          0x00000000        0x0 src/cpu.o
+ .bss           0x00000000        0x0 src/cpu.o
+ .debug_info    0x00000000       0x71 src/cpu.o
+ .debug_abbrev  0x00000000       0x2c src/cpu.o
+ .debug_aranges
+                0x00000000       0x18 src/cpu.o
+ .debug_line    0x00000000       0x44 src/cpu.o
+ .debug_str     0x00000000      0x132 src/cpu.o
+ .debug_line_str
+                0x00000000       0x26 src/cpu.o
+ .comment       0x00000000       0x34 src/cpu.o
+ .note.GNU-stack
+                0x00000000        0x0 src/cpu.o
+ .riscv.attributes
+                0x00000000       0x57 src/cpu.o
+ .text          0x00000000        0x0 src/idle.o
+ .data          0x00000000        0x0 src/idle.o
+ .bss           0x00000000        0x0 src/idle.o
+ .text.rt_thread_idle_gethandler
+                0x00000000        0xa src/idle.o
+ .text          0x00000000        0x0 src/ipc.o
+ .data          0x00000000        0x0 src/ipc.o
+ .bss           0x00000000        0x0 src/ipc.o
+ .text.rt_ipc_list_resume_all.isra.0
+                0x00000000       0x44 src/ipc.o
+ .text.rt_sem_detach
+                0x00000000       0x9a src/ipc.o
+ .text.rt_sem_create
+                0x00000000       0xb2 src/ipc.o
+ .rodata.rt_sem_delete.str1.4
+                0x00000000       0x3b src/ipc.o
+ .text.rt_sem_delete
+                0x00000000       0xf0 src/ipc.o
+ .text.rt_sem_trytake
+                0x00000000        0xa src/ipc.o
+ .text.rt_sem_control
+                0x00000000       0x9c src/ipc.o
+ .rodata.__FUNCTION__.0
+                0x00000000        0xf src/ipc.o
+ .rodata.__FUNCTION__.3
+                0x00000000        0xe src/ipc.o
+ .rodata.__FUNCTION__.4
+                0x00000000        0xe src/ipc.o
+ .rodata.__FUNCTION__.5
+                0x00000000        0xe src/ipc.o
+ .text          0x00000000        0x0 src/irq.o
+ .data          0x00000000        0x0 src/irq.o
+ .bss           0x00000000        0x0 src/irq.o
+ .text          0x00000000        0x0 src/kservice.o
+ .data          0x00000000        0x0 src/kservice.o
+ .bss           0x00000000        0x0 src/kservice.o
+ .text.rt_get_errno
+                0x00000000       0x2a src/kservice.o
+ .text._rt_errno
+                0x00000000       0x2c src/kservice.o
+ .text.rt_memcpy
+                0x00000000       0x9e src/kservice.o
+ .text.rt_memcmp
+                0x00000000       0x28 src/kservice.o
+ .text.rt_strcasecmp
+                0x00000000       0x34 src/kservice.o
+ .text.rt_strcmp
+                0x00000000       0x1a src/kservice.o
+ .text.rt_strnlen
+                0x00000000       0x18 src/kservice.o
+ .text.rt_strstr
+                0x00000000       0x60 src/kservice.o
+ .text.rt_strdup
+                0x00000000       0x3a src/kservice.o
+ .text.rt_snprintf
+                0x00000000       0x20 src/kservice.o
+ .text.rt_vsprintf
+                0x00000000        0xe src/kservice.o
+ .text.rt_sprintf
+                0x00000000       0x22 src/kservice.o
+ .text.rt_console_set_device
+                0x00000000       0x4c src/kservice.o
+ .text.rt_hw_console_output
+                0x00000000        0x2 src/kservice.o
+ .text.rt_kputs
+                0x00000000       0x64 src/kservice.o
+ .text.rt_malloc_align
+                0x00000000       0x40 src/kservice.o
+ .text.rt_free_align
+                0x00000000        0xc src/kservice.o
+ .text.rt_assert_set_hook
+                0x00000000        0xa src/kservice.o
+ .text          0x00000000        0x0 src/mem.o
+ .data          0x00000000        0x0 src/mem.o
+ .bss           0x00000000        0x0 src/mem.o
+ .text.rt_realloc
+                0x00000000      0x17e src/mem.o
+ .text.rt_memory_info
+                0x00000000       0x26 src/mem.o
+ .rodata.__FUNCTION__.2
+                0x00000000        0xb src/mem.o
+ .text          0x00000000        0x0 src/memheap.o
+ .data          0x00000000        0x0 src/memheap.o
+ .bss           0x00000000        0x0 src/memheap.o
+ .debug_info    0x00000000       0x71 src/memheap.o
+ .debug_abbrev  0x00000000       0x2c src/memheap.o
+ .debug_aranges
+                0x00000000       0x18 src/memheap.o
+ .debug_line    0x00000000       0x44 src/memheap.o
+ .debug_str     0x00000000      0x132 src/memheap.o
+ .debug_line_str
+                0x00000000       0x2e src/memheap.o
+ .comment       0x00000000       0x34 src/memheap.o
+ .note.GNU-stack
+                0x00000000        0x0 src/memheap.o
+ .riscv.attributes
+                0x00000000       0x57 src/memheap.o
+ .text          0x00000000        0x0 src/mempool.o
+ .data          0x00000000        0x0 src/mempool.o
+ .bss           0x00000000        0x0 src/mempool.o
+ .debug_info    0x00000000       0x71 src/mempool.o
+ .debug_abbrev  0x00000000       0x2c src/mempool.o
+ .debug_aranges
+                0x00000000       0x18 src/mempool.o
+ .debug_line    0x00000000       0x44 src/mempool.o
+ .debug_str     0x00000000      0x132 src/mempool.o
+ .debug_line_str
+                0x00000000       0x2e src/mempool.o
+ .comment       0x00000000       0x34 src/mempool.o
+ .note.GNU-stack
+                0x00000000        0x0 src/mempool.o
+ .riscv.attributes
+                0x00000000       0x57 src/mempool.o
+ .text          0x00000000        0x0 src/object.o
+ .data          0x00000000        0x0 src/object.o
+ .bss           0x00000000        0x0 src/object.o
+ .text.rt_system_object_init
+                0x00000000        0x2 src/object.o
+ .text          0x00000000        0x0 src/scheduler.o
+ .data          0x00000000        0x0 src/scheduler.o
+ .bss           0x00000000        0x0 src/scheduler.o
+ .text.rt_critical_level
+                0x00000000        0xa src/scheduler.o
+ .text          0x00000000        0x0 src/slab.o
+ .data          0x00000000        0x0 src/slab.o
+ .bss           0x00000000        0x0 src/slab.o
+ .debug_info    0x00000000       0x71 src/slab.o
+ .debug_abbrev  0x00000000       0x2c src/slab.o
+ .debug_aranges
+                0x00000000       0x18 src/slab.o
+ .debug_line    0x00000000       0x44 src/slab.o
+ .debug_str     0x00000000      0x132 src/slab.o
+ .debug_line_str
+                0x00000000       0x28 src/slab.o
+ .comment       0x00000000       0x34 src/slab.o
+ .note.GNU-stack
+                0x00000000        0x0 src/slab.o
+ .riscv.attributes
+                0x00000000       0x57 src/slab.o
+ .text          0x00000000        0x0 src/thread.o
+ .data          0x00000000        0x0 src/thread.o
+ .bss           0x00000000        0x0 src/thread.o
+ .rodata.rt_thread_detach.str1.4
+                0x00000000       0x2f src/thread.o
+ .text.rt_thread_detach
+                0x00000000       0xee src/thread.o
+ .rodata.rt_thread_delete.str1.4
+                0x00000000       0x3b src/thread.o
+ .text.rt_thread_delete
+                0x00000000       0xce src/thread.o
+ .text.rt_thread_delay
+                0x00000000        0x8 src/thread.o
+ .text.rt_thread_control
+                0x00000000      0x102 src/thread.o
+ .rodata.rt_thread_find.str1.4
+                0x00000000       0x17 src/thread.o
+ .text.rt_thread_find
+                0x00000000       0xa0 src/thread.o
+ .rodata.__FUNCTION__.0
+                0x00000000        0xf src/thread.o
+ .rodata.__FUNCTION__.4
+                0x00000000       0x12 src/thread.o
+ .rodata.__FUNCTION__.6
+                0x00000000       0x11 src/thread.o
+ .rodata.__FUNCTION__.7
+                0x00000000       0x11 src/thread.o
+ .text          0x00000000        0x0 src/timer.o
+ .data          0x00000000        0x0 src/timer.o
+ .bss           0x00000000        0x0 src/timer.o
+ .text.rt_timer_create
+                0x00000000       0x42 src/timer.o
+ .rodata.rt_timer_delete.str1.4
+                0x00000000       0x36 src/timer.o
+ .text.rt_timer_delete
+                0x00000000       0xb0 src/timer.o
+ .text.rt_timer_next_timeout_tick
+                0x00000000       0x14 src/timer.o
+ .rodata.__FUNCTION__.4
+                0x00000000       0x10 src/timer.o
+ .text          0x00000000        0x0 device/device.o
+ .data          0x00000000        0x0 device/device.o
+ .bss           0x00000000        0x0 device/device.o
+ .text.rt_device_unregister
+                0x00000000       0x8e device/device.o
+ .text.rt_device_init_all
+                0x00000000        0x4 device/device.o
+ .text.rt_device_register
+                0x00000000       0x4a device/device.o
+ .text.rt_device_create
+                0x00000000       0x3c device/device.o
+ .rodata.rt_device_destroy.str1.4
+                0x00000000       0x34 device/device.o
+ .text.rt_device_destroy
+                0x00000000       0x94 device/device.o
+ .text.rt_device_init
+                0x00000000       0x6a device/device.o
+ .text.rt_device_control
+                0x00000000       0x7e device/device.o
+ .text.rt_device_set_tx_complete
+                0x00000000       0x64 device/device.o
+ .rodata.__FUNCTION__.0
+                0x00000000       0x1a device/device.o
+ .rodata.__FUNCTION__.2
+                0x00000000       0x12 device/device.o
+ .rodata.__FUNCTION__.7
+                0x00000000        0xf device/device.o
+ .rodata.__FUNCTION__.8
+                0x00000000       0x12 device/device.o
+ .rodata.__FUNCTION__.9
+                0x00000000       0x15 device/device.o
+ .text          0x00000000        0x0 bsp/board.o
+ .data          0x00000000        0x0 bsp/board.o
+ .bss           0x00000000        0x0 bsp/board.o
+ .text.rt_hw_cpu_reset
+                0x00000000       0x18 bsp/board.o
+ .text.rt_hw_cpu_icache_enable
+                0x00000000        0x2 bsp/board.o
+ .text.rt_hw_cpu_icache_disable
+                0x00000000        0x2 bsp/board.o
+ .text.rt_hw_cpu_icache_status
+                0x00000000        0x4 bsp/board.o
+ .text.rt_hw_cpu_icache_ops
+                0x00000000        0x2 bsp/board.o
+ .text.rt_hw_cpu_dcache_enable
+                0x00000000        0x2 bsp/board.o
+ .text.rt_hw_cpu_dcache_disable
+                0x00000000        0x2 bsp/board.o
+ .text.rt_hw_cpu_dcache_status
+                0x00000000        0x4 bsp/board.o
+ .text.rt_hw_cpu_dcache_ops
+                0x00000000        0x2 bsp/board.o
+ .text.rt_hw_us_delay
+                0x00000000       0x12 bsp/board.o
+ .rodata.rt_hw_show_memory.str1.4
+                0x00000000       0x24 bsp/board.o
+ .text.rt_hw_show_memory
+                0x00000000       0x10 bsp/board.o
+ .rodata.rt_hw_backtrace.str1.4
+                0x00000000       0x22 bsp/board.o
+ .text.rt_hw_backtrace
+                0x00000000       0x10 bsp/board.o
+ .text          0x00000000        0x0 finsh/shell.o
+ .data          0x00000000        0x0 finsh/shell.o
+ .bss           0x00000000        0x0 finsh/shell.o
+ .text.finsh_set_prompt
+                0x00000000       0x52 finsh/shell.o
+ .text.finsh_get_prompt_mode
+                0x00000000       0x3e finsh/shell.o
+ .text.finsh_get_device
+                0x00000000       0x3a finsh/shell.o
+ .text.finsh_set_echo
+                0x00000000       0x4e finsh/shell.o
+ .text.finsh_get_echo
+                0x00000000       0x3c finsh/shell.o
+ .text.finsh_system_function_init
+                0x00000000       0x12 finsh/shell.o
+ .text.finsh_system_var_init
+                0x00000000       0x12 finsh/shell.o
+ .rodata.__FUNCTION__.1
+                0x00000000        0xf finsh/shell.o
+ .rodata.__FUNCTION__.2
+                0x00000000        0xf finsh/shell.o
+ .rodata.__FUNCTION__.3
+                0x00000000       0x11 finsh/shell.o
+ .rodata.__FUNCTION__.7
+                0x00000000       0x16 finsh/shell.o
+ .text          0x00000000        0x0 finsh/cmd.o
+ .data          0x00000000        0x0 finsh/cmd.o
+ .bss           0x00000000        0x0 finsh/cmd.o
+ .text          0x00000000        0x0 finsh/finsh_port.o
+ .data          0x00000000        0x0 finsh/finsh_port.o
+ .bss           0x00000000        0x0 finsh/finsh_port.o
+ .text.rt_hw_console_getchar
+                0x00000000        0x6 finsh/finsh_port.o
+ .debug_info    0x00000000       0x9c finsh/finsh_port.o
+ .debug_abbrev  0x00000000       0x5c finsh/finsh_port.o
+ .debug_aranges
+                0x00000000       0x20 finsh/finsh_port.o
+ .debug_rnglists
+                0x00000000       0x13 finsh/finsh_port.o
+ .debug_line    0x00000000       0x61 finsh/finsh_port.o
+ .debug_str     0x00000000      0x148 finsh/finsh_port.o
+ .debug_line_str
+                0x00000000       0x38 finsh/finsh_port.o
+ .comment       0x00000000       0x34 finsh/finsh_port.o
+ .note.GNU-stack
+                0x00000000        0x0 finsh/finsh_port.o
+ .debug_frame   0x00000000       0x20 finsh/finsh_port.o
+ .riscv.attributes
+                0x00000000       0x57 finsh/finsh_port.o
+ .text          0x00000000        0x0 finsh/msh.o
+ .data          0x00000000        0x0 finsh/msh.o
+ .bss           0x00000000        0x0 finsh/msh.o
+ .text          0x00000000        0x0 applications/main.o
+ .data          0x00000000        0x0 applications/main.o
+ .bss           0x00000000        0x0 applications/main.o
+ .text          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+ .text          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+ .text          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
+ .text          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+ .text          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+ .text          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+ .data          0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+ .bss           0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x80000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD start.o
+LOAD libcpu/context_gcc.o
+LOAD libcpu/trap_entry.o
+LOAD libcpu/cpuport.o
+LOAD libcpu/interrupt.o
+LOAD src/clock.o
+LOAD src/components.o
+LOAD src/cpu.o
+LOAD src/idle.o
+LOAD src/ipc.o
+LOAD src/irq.o
+LOAD src/kservice.o
+LOAD src/mem.o
+LOAD src/memheap.o
+LOAD src/mempool.o
+LOAD src/object.o
+LOAD src/scheduler.o
+LOAD src/slab.o
+LOAD src/thread.o
+LOAD src/timer.o
+LOAD device/device.o
+LOAD bsp/board.o
+LOAD finsh/shell.o
+LOAD finsh/cmd.o
+LOAD finsh/finsh_port.o
+LOAD finsh/msh.o
+LOAD applications/main.o
+LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0\libgcc.a
+START GROUP
+LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a
+LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libgloss.a
+END GROUP
+LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0\libgcc.a
+                0x00002000                        _stack_size = 0x2000
+                0x00004000                        _heap_size = 0x4000
+                0x80000000                        . = ORIGIN (RAM)
+
+.text           0x80000000     0x3a00
+ *(.text.init)
+ .text.init     0x80000000       0x34 start.o
+                0x80000000                _start
+ *(.text.trap)
+ *fill*         0x80000034        0x0 
+ .text.trap     0x80000034       0x90 libcpu/trap_entry.o
+                0x80000034                trap_entry
+ *(.text .text.*)
+ .text          0x800000c4       0xc4 libcpu/context_gcc.o
+                0x800000c4                rt_hw_interrupt_disable
+                0x800000ca                rt_hw_interrupt_enable
+                0x800000d0                rt_hw_context_switch_to
+                0x800000dc                rt_hw_context_switch
+                0x80000132                rt_hw_context_switch_exit
+ .text.rt_hw_stack_init
+                0x80000188       0x34 libcpu/cpuport.o
+                0x80000188                rt_hw_stack_init
+ .text.rt_hw_context_switch_interrupt
+                0x800001bc       0x16 libcpu/cpuport.o
+                0x800001bc                rt_hw_context_switch_interrupt
+ .text.rt_hw_cpu_shutdown
+                0x800001d2       0x44 libcpu/cpuport.o
+                0x800001d2                rt_hw_cpu_shutdown
+ .text.rt_hw_interrupt_init
+                0x80000216       0xa0 libcpu/interrupt.o
+                0x80000216                rt_hw_interrupt_init
+ .text.rt_hw_trap_handler
+                0x800002b6      0x150 libcpu/interrupt.o
+                0x800002b6                rt_hw_trap_handler
+ .text.rt_tick_get
+                0x80000406        0x6 src/clock.o
+                0x80000406                rt_tick_get
+ .text.rt_tick_increase
+                0x8000040c       0x2a src/clock.o
+                0x8000040c                rt_tick_increase
+ .text.rt_tick_from_millisecond
+                0x80000436       0x2c src/clock.o
+                0x80000436                rt_tick_from_millisecond
+ .text.rti_start
+                0x80000462        0x4 src/components.o
+ .text.rti_board_start
+                0x80000466        0x4 src/components.o
+ .text.rti_board_end
+                0x8000046a        0x4 src/components.o
+ .text.rti_end  0x8000046e        0x4 src/components.o
+ .text.rt_components_init
+                0x80000472       0x2e src/components.o
+                0x80000472                rt_components_init
+ .text.main_thread_entry
+                0x800004a0        0xe src/components.o
+                0x800004a0                main_thread_entry
+ .text.rt_application_init
+                0x800004ae       0x4e src/components.o
+                0x800004ae                rt_application_init
+ .text.rtthread_startup
+                0x800004fc       0x2a src/components.o
+                0x800004fc                rtthread_startup
+ .text.rt_thread_idle_excute
+                0x80000526       0xca src/idle.o
+                0x80000526                rt_thread_idle_excute
+ .text.rt_thread_idle_entry
+                0x800005f0        0x8 src/idle.o
+ .text.rt_thread_idle_init
+                0x800005f8       0x40 src/idle.o
+                0x800005f8                rt_thread_idle_init
+ .text.rt_sem_init
+                0x80000638       0x76 src/ipc.o
+                0x80000638                rt_sem_init
+ .text.rt_sem_take
+                0x800006ae      0x16e src/ipc.o
+                0x800006ae                rt_sem_take
+ .text.rt_sem_release
+                0x8000081c       0x86 src/ipc.o
+                0x8000081c                rt_sem_release
+ .text.rt_interrupt_enter
+                0x800008a2       0x1a src/irq.o
+                0x800008a2                rt_interrupt_enter
+ .text.rt_interrupt_leave
+                0x800008bc       0x1a src/irq.o
+                0x800008bc                rt_interrupt_leave
+ .text.rt_interrupt_get_nest
+                0x800008d6        0x6 src/irq.o
+                0x800008d6                rt_interrupt_get_nest
+ .text.print_number
+                0x800008dc      0x196 src/kservice.o
+ .text.rt_set_errno
+                0x80000a72       0x22 src/kservice.o
+                0x80000a72                rt_set_errno
+ .text.rt_memset
+                0x80000a94       0x74 src/kservice.o
+                0x80000a94                rt_memset
+ .text.rt_memmove
+                0x80000b08       0x4a src/kservice.o
+                0x80000b08                rt_memmove
+ .text.rt_strncpy
+                0x80000b52       0x28 src/kservice.o
+                0x80000b52                rt_strncpy
+ .text.rt_strncmp
+                0x80000b7a       0x2c src/kservice.o
+                0x80000b7a                rt_strncmp
+ .text.rt_strlen
+                0x80000ba6       0x12 src/kservice.o
+                0x80000ba6                rt_strlen
+ .text.rt_vsnprintf
+                0x80000bb8      0x3ba src/kservice.o
+                0x80000bb8                rt_vsnprintf
+ .text.rt_console_get_device
+                0x80000f72        0x6 src/kservice.o
+                0x80000f72                rt_console_get_device
+ .text.rt_kprintf
+                0x80000f78       0x6e src/kservice.o
+                0x80000f78                rt_kprintf
+ .text.rt_show_version
+                0x80000fe6       0x3e src/kservice.o
+                0x80000fe6                rt_show_version
+ .text.__rt_ffs
+                0x80001024       0x5a src/kservice.o
+                0x80001024                __rt_ffs
+ .text.rt_assert_handler
+                0x8000107e       0x30 src/kservice.o
+                0x8000107e                rt_assert_handler
+ .text.list_mem
+                0x800010ae       0x32 src/mem.o
+                0x800010ae                list_mem
+ .text.plug_holes
+                0x800010e0       0xc6 src/mem.o
+ .text.rt_system_heap_init
+                0x800011a6       0xda src/mem.o
+                0x800011a6                rt_system_heap_init
+ .text.rt_malloc
+                0x80001280      0x1a8 src/mem.o
+                0x80001280                rt_malloc
+ .text.rt_calloc
+                0x80001428       0x26 src/mem.o
+                0x80001428                rt_calloc
+ .text.rt_free  0x8000144e      0x17c src/mem.o
+                0x8000144e                rt_free
+ .text.rt_object_get_information
+                0x800015ca       0x28 src/object.o
+                0x800015ca                rt_object_get_information
+ .text.rt_object_init
+                0x800015f2       0xb6 src/object.o
+                0x800015f2                rt_object_init
+ .text.rt_object_detach
+                0x800016a8       0x44 src/object.o
+                0x800016a8                rt_object_detach
+ .text.rt_object_allocate
+                0x800016ec       0xb6 src/object.o
+                0x800016ec                rt_object_allocate
+ .text.rt_object_delete
+                0x800017a2       0x68 src/object.o
+                0x800017a2                rt_object_delete
+ .text.rt_object_is_systemobject
+                0x8000180a       0x30 src/object.o
+                0x8000180a                rt_object_is_systemobject
+ .text.rt_object_get_type
+                0x8000183a       0x32 src/object.o
+                0x8000183a                rt_object_get_type
+ .text.rt_object_find
+                0x8000186c       0xa8 src/object.o
+                0x8000186c                rt_object_find
+ .text.rt_system_scheduler_init
+                0x80001914       0x2e src/scheduler.o
+                0x80001914                rt_system_scheduler_init
+ .text.rt_system_scheduler_start
+                0x80001942       0x2a src/scheduler.o
+                0x80001942                rt_system_scheduler_start
+ .text.rt_schedule
+                0x8000196c       0x5e src/scheduler.o
+                0x8000196c                rt_schedule
+ .text.rt_schedule_insert_thread
+                0x800019ca       0x64 src/scheduler.o
+                0x800019ca                rt_schedule_insert_thread
+ .text.rt_schedule_remove_thread
+                0x80001a2e       0x62 src/scheduler.o
+                0x80001a2e                rt_schedule_remove_thread
+ .text.rt_enter_critical
+                0x80001a90       0x1a src/scheduler.o
+                0x80001a90                rt_enter_critical
+ .text.rt_exit_critical
+                0x80001aaa       0x3c src/scheduler.o
+                0x80001aaa                rt_exit_critical
+ .text.rt_thread_exit
+                0x80001ae6       0x5a src/thread.o
+                0x80001ae6                rt_thread_exit
+ .text.rt_thread_timeout
+                0x80001b40       0x8a src/thread.o
+                0x80001b40                rt_thread_timeout
+ .text._rt_thread_init.isra.0
+                0x80001bca       0xa8 src/thread.o
+ .text.rt_thread_init
+                0x80001c72       0x8a src/thread.o
+                0x80001c72                rt_thread_init
+ .text.rt_thread_self
+                0x80001cfc        0x6 src/thread.o
+                0x80001cfc                rt_thread_self
+ .text.rt_thread_create
+                0x80001d02       0x58 src/thread.o
+                0x80001d02                rt_thread_create
+ .text.rt_thread_yield
+                0x80001d5a       0x5c src/thread.o
+                0x80001d5a                rt_thread_yield
+ .text.rt_thread_suspend
+                0x80001db6       0x88 src/thread.o
+                0x80001db6                rt_thread_suspend
+ .text.rt_thread_sleep
+                0x80001e3e       0x8c src/thread.o
+                0x80001e3e                rt_thread_sleep
+ .text.rt_thread_mdelay
+                0x80001eca        0xe src/thread.o
+                0x80001eca                rt_thread_mdelay
+ .text.rt_thread_resume
+                0x80001ed8       0x8a src/thread.o
+                0x80001ed8                rt_thread_resume
+ .text.rt_thread_startup
+                0x80001f62       0x94 src/thread.o
+                0x80001f62                rt_thread_startup
+ .text._rt_timer_remove
+                0x80001ff6       0x12 src/timer.o
+ .text.rt_timer_init
+                0x80002008       0x72 src/timer.o
+                0x80002008                rt_timer_init
+ .text.rt_timer_detach
+                0x8000207a       0x8a src/timer.o
+                0x8000207a                rt_timer_detach
+ .text.rt_timer_start
+                0x80002104       0xea src/timer.o
+                0x80002104                rt_timer_start
+ .text.rt_timer_stop
+                0x800021ee       0x7a src/timer.o
+                0x800021ee                rt_timer_stop
+ .text.rt_timer_control
+                0x80002268       0x9a src/timer.o
+                0x80002268                rt_timer_control
+ .text.rt_timer_check
+                0x80002302       0x84 src/timer.o
+                0x80002302                rt_timer_check
+ .text.rt_system_timer_init
+                0x80002386        0xa src/timer.o
+                0x80002386                rt_system_timer_init
+ .text.rt_system_timer_thread_init
+                0x80002390        0x2 src/timer.o
+                0x80002390                rt_system_timer_thread_init
+ .text.rt_device_find
+                0x80002392        0x6 device/device.o
+                0x80002392                rt_device_find
+ .text.rt_device_open
+                0x80002398       0xf8 device/device.o
+                0x80002398                rt_device_open
+ .text.rt_device_close
+                0x80002490       0x7c device/device.o
+                0x80002490                rt_device_close
+ .text.rt_device_read
+                0x8000250c       0x8a device/device.o
+                0x8000250c                rt_device_read
+ .text.rt_device_write
+                0x80002596       0x8a device/device.o
+                0x80002596                rt_device_write
+ .text.rt_device_set_rx_indicate
+                0x80002620       0x58 device/device.o
+                0x80002620                rt_device_set_rx_indicate
+ .text.rt_hw_uart_init
+                0x80002678        0x2 bsp/board.o
+                0x80002678                rt_hw_uart_init
+ .text.rt_hw_board_init
+                0x8000267a       0x52 bsp/board.o
+                0x8000267a                rt_hw_board_init
+ .text.rt_hw_console_output
+                0x800026cc       0x3c bsp/board.o
+                0x800026cc                rt_hw_console_output
+ .text.rt_hw_console_getchar
+                0x80002708       0x1e bsp/board.o
+                0x80002708                rt_hw_console_getchar
+ .text.finsh_rx_ind
+                0x80002726       0x36 finsh/shell.o
+ .text.finsh_get_prompt
+                0x8000275c       0x6a finsh/shell.o
+                0x8000275c                finsh_get_prompt
+ .text.finsh_set_prompt_mode
+                0x800027c6       0x48 finsh/shell.o
+                0x800027c6                finsh_set_prompt_mode
+ .text.finsh_system_init
+                0x8000280e       0xa8 finsh/shell.o
+                0x8000280e                finsh_system_init
+ .text.finsh_set_device
+                0x800028b6       0xbc finsh/shell.o
+                0x800028b6                finsh_set_device
+ .text.finsh_thread_entry
+                0x80002972      0x38e finsh/shell.o
+                0x80002972                finsh_thread_entry
+ .text.hello    0x80002d00       0x18 finsh/cmd.o
+                0x80002d00                hello
+ .text.version  0x80002d18       0x10 finsh/cmd.o
+                0x80002d18                version
+ .text.list_get_next
+                0x80002d28       0x84 finsh/cmd.o
+ .text.list     0x80002dac       0x5e finsh/cmd.o
+                0x80002dac                list
+ .text.object_split.constprop.0
+                0x80002e0a       0x28 finsh/cmd.o
+ .text.list_timer
+                0x80002e32      0x102 finsh/cmd.o
+                0x80002e32                list_timer
+ .text.list_thread
+                0x80002f34      0x176 finsh/cmd.o
+                0x80002f34                list_thread
+ .text.list_device
+                0x800030aa       0xf4 finsh/cmd.o
+                0x800030aa                list_device
+ .text.list_sem
+                0x8000319e      0x144 finsh/cmd.o
+                0x8000319e                list_sem
+ .text.msh_help
+                0x800032e2       0x6a finsh/msh.o
+                0x800032e2                msh_help
+ .text.cmd_ps   0x8000334c       0x10 finsh/msh.o
+                0x8000334c                cmd_ps
+ .text.cmd_free
+                0x8000335c       0x10 finsh/msh.o
+                0x8000335c                cmd_free
+ .text.msh_is_used
+                0x8000336c        0x4 finsh/msh.o
+                0x8000336c                msh_is_used
+ .text.msh_exec
+                0x80003370      0x1c6 finsh/msh.o
+                0x80003370                msh_exec
+ .text.msh_auto_complete
+                0x80003536       0xd6 finsh/msh.o
+                0x80003536                msh_auto_complete
+ .text.startup.main
+                0x8000360c       0x1a applications/main.o
+                0x8000360c                main
+ .text.strcat   0x80003626       0x68 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+                0x80003626                strcat
+ .text.strncmp  0x8000368e       0x7a D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+                0x8000368e                strncmp
+ .text.strncpy  0x80003708       0x78 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+                0x80003708                strncpy
+ .text          0x80003780       0xa8 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
+                0x80003780                memset
+ .text.memcpy   0x80003828       0xe8 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+                0x80003828                memcpy
+ .text.strlen   0x80003910       0x64 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+                0x80003910                strlen
+ .text.strcpy   0x80003974       0x76 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+                0x80003974                strcpy
+                0x800039ec                        . = ALIGN (0x4)
+ *fill*         0x800039ea        0x2 
+                0x800039ec                        __rt_init_start = .
+ *(SORT_BY_NAME(.rti_fn*))
+ .rti_fn.0      0x800039ec        0x4 src/components.o
+                0x800039ec                __rt_init_rti_start
+ .rti_fn.0.end  0x800039f0        0x4 src/components.o
+                0x800039f0                __rt_init_rti_board_start
+ .rti_fn.1.end  0x800039f4        0x4 src/components.o
+                0x800039f4                __rt_init_rti_board_end
+ .rti_fn.6      0x800039f8        0x4 finsh/shell.o
+                0x800039f8                __rt_init_finsh_system_init
+ .rti_fn.6.end  0x800039fc        0x4 src/components.o
+                0x800039fc                __rt_init_rti_end
+                0x80003a00                        __rt_init_end = .
+
+.rodata         0x80003a00     0x160c
+ *(.rodata .rodata.*)
+ .rodata.rt_hw_cpu_shutdown.str1.4
+                0x80003a00      0xdd6 libcpu/cpuport.o
+                                  0xe (size before relaxing)
+ *fill*         0x800047d6        0x2 
+ .rodata.__FUNCTION__.0
+                0x800047d8       0x13 libcpu/cpuport.o
+ .rodata.rt_hw_trap_handler.str1.4
+                0x800047eb        0x0 libcpu/interrupt.o
+                                0x10f (size before relaxing)
+ .rodata.rt_application_init.str1.4
+                0x800047eb        0x0 src/components.o
+                                 0x17 (size before relaxing)
+ *fill*         0x800047eb        0x1 
+ .rodata.__FUNCTION__.0
+                0x800047ec       0x14 src/components.o
+ .rodata.rt_thread_idle_excute.str1.4
+                0x80004800        0x0 src/idle.o
+                                 0x2a (size before relaxing)
+ .rodata.rt_thread_idle_init.str1.4
+                0x80004800        0x0 src/idle.o
+                                  0x6 (size before relaxing)
+ .rodata.__FUNCTION__.0
+                0x80004800       0x16 src/idle.o
+ .rodata.rt_sem_init.str1.4
+                0x80004816        0x0 src/ipc.o
+                                 0x21 (size before relaxing)
+ .rodata.rt_sem_detach.str1.4
+                0x80004816        0x0 src/ipc.o
+                                 0x77 (size before relaxing)
+ .rodata.rt_sem_create.str1.4
+                0x80004816        0x0 src/ipc.o
+                                 0x2a (size before relaxing)
+ .rodata.rt_sem_take.str1.4
+                0x80004816        0x0 src/ipc.o
+                                 0x37 (size before relaxing)
+ *fill*         0x80004816        0x2 
+ .rodata.__FUNCTION__.1
+                0x80004818        0xf src/ipc.o
+ *fill*         0x80004827        0x1 
+ .rodata.__FUNCTION__.2
+                0x80004828        0xc src/ipc.o
+ .rodata.__FUNCTION__.6
+                0x80004834        0xc src/ipc.o
+ .rodata.rt_vsnprintf.str1.4
+                0x80004840        0x0 src/kservice.o
+                                  0x7 (size before relaxing)
+ .rodata.rt_vsnprintf
+                0x80004840       0x58 src/kservice.o
+ .rodata.rt_show_version.str1.4
+                0x80004898        0x0 src/kservice.o
+                                 0x86 (size before relaxing)
+ .rodata.rt_assert_handler.str1.4
+                0x80004898        0x0 src/kservice.o
+                                 0x37 (size before relaxing)
+ .rodata.small_digits.1
+                0x80004898       0x11 src/kservice.o
+ *fill*         0x800048a9        0x3 
+ .rodata.large_digits.2
+                0x800048ac       0x11 src/kservice.o
+ *fill*         0x800048bd        0x3 
+ .rodata.__lowest_bit_bitmap
+                0x800048c0      0x100 src/kservice.o
+                0x800048c0                __lowest_bit_bitmap
+ .rodata.list_mem.str1.4
+                0x800049c0        0x0 src/mem.o
+                                 0x46 (size before relaxing)
+ .rodata.plug_holes.str1.4
+                0x800049c0        0x0 src/mem.o
+                                 0x5b (size before relaxing)
+ .rodata.rt_system_heap_init.str1.4
+                0x800049c0        0x0 src/mem.o
+                                 0x6e (size before relaxing)
+ .rodata.rt_malloc.str1.4
+                0x800049c0        0x0 src/mem.o
+                                 0xc4 (size before relaxing)
+ .rodata.rt_free.str1.4
+                0x800049c0        0x0 src/mem.o
+                                0x101 (size before relaxing)
+ .rodata.__FUNCTION__.1
+                0x800049c0        0xb src/mem.o
+ *fill*         0x800049cb        0x1 
+ .rodata.__FUNCTION__.3
+                0x800049cc        0xa src/mem.o
+ *fill*         0x800049d6        0x2 
+ .rodata.__FUNCTION__.4
+                0x800049d8       0x14 src/mem.o
+ .rodata.name   0x800049ec       0x29 src/mem.o
+                0x800049ec                __fsym_list_mem_desc
+                0x80004a0c                __fsym_list_mem_name
+ .rodata.rt_object_init.str1.4
+                0x80004a15        0x0 src/object.o
+                                 0x26 (size before relaxing)
+ .rodata.rt_object_detach.str1.4
+                0x80004a15        0x0 src/object.o
+                                 0x12 (size before relaxing)
+ .rodata.rt_object_allocate.str1.4
+                0x80004a15        0x0 src/object.o
+                                 0x2a (size before relaxing)
+ .rodata.rt_object_delete.str1.4
+                0x80004a15        0x0 src/object.o
+                                 0x29 (size before relaxing)
+ *fill*         0x80004a15        0x3 
+ .rodata.__FUNCTION__.0
+                0x80004a18        0xf src/object.o
+ *fill*         0x80004a27        0x1 
+ .rodata.__FUNCTION__.1
+                0x80004a28       0x13 src/object.o
+ *fill*         0x80004a3b        0x1 
+ .rodata.__FUNCTION__.2
+                0x80004a3c       0x1a src/object.o
+ *fill*         0x80004a56        0x2 
+ .rodata.__FUNCTION__.3
+                0x80004a58       0x11 src/object.o
+ *fill*         0x80004a69        0x3 
+ .rodata.__FUNCTION__.4
+                0x80004a6c       0x13 src/object.o
+ *fill*         0x80004a7f        0x1 
+ .rodata.__FUNCTION__.5
+                0x80004a80       0x11 src/object.o
+ *fill*         0x80004a91        0x3 
+ .rodata.__FUNCTION__.6
+                0x80004a94        0xf src/object.o
+ .rodata.rt_schedule_insert_thread.str1.4
+                0x80004aa3        0x0 src/scheduler.o
+                                 0x12 (size before relaxing)
+ *fill*         0x80004aa3        0x1 
+ .rodata.__FUNCTION__.0
+                0x80004aa4       0x1a src/scheduler.o
+ *fill*         0x80004abe        0x2 
+ .rodata.__FUNCTION__.1
+                0x80004ac0       0x1a src/scheduler.o
+ .rodata.rt_thread_timeout.str1.4
+                0x80004ada        0x0 src/thread.o
+                                 0x92 (size before relaxing)
+ .rodata._rt_thread_init.isra.0.str1.4
+                0x80004ada        0x0 src/thread.o
+                                 0x22 (size before relaxing)
+ .rodata.rt_thread_init.str1.4
+                0x80004ada        0x0 src/thread.o
+                                 0x17 (size before relaxing)
+ .rodata.rt_thread_startup.str1.4
+                0x80004ada        0x0 src/thread.o
+                                 0x37 (size before relaxing)
+ *fill*         0x80004ada        0x2 
+ .rodata.__FUNCTION__.1
+                0x80004adc       0x12 src/thread.o
+ *fill*         0x80004aee        0x2 
+ .rodata.__FUNCTION__.2
+                0x80004af0       0x11 src/thread.o
+ *fill*         0x80004b01        0x3 
+ .rodata.__FUNCTION__.3
+                0x80004b04       0x12 src/thread.o
+ *fill*         0x80004b16        0x2 
+ .rodata.__FUNCTION__.5
+                0x80004b18       0x10 src/thread.o
+ .rodata.__FUNCTION__.8
+                0x80004b28       0x12 src/thread.o
+ *fill*         0x80004b3a        0x2 
+ .rodata.__FUNCTION__.9
+                0x80004b3c       0x10 src/thread.o
+ .rodata.__FUNCTION__.10
+                0x80004b4c        0xf src/thread.o
+ .rodata.rt_timer_init.str1.4
+                0x80004b5b        0x0 src/timer.o
+                                 0x11 (size before relaxing)
+ .rodata.rt_timer_detach.str1.4
+                0x80004b5b        0x0 src/timer.o
+                                 0x66 (size before relaxing)
+ .rodata.rt_timer_start.str1.4
+                0x80004b5b        0x0 src/timer.o
+                                 0x23 (size before relaxing)
+ *fill*         0x80004b5b        0x1 
+ .rodata.__FUNCTION__.0
+                0x80004b5c       0x11 src/timer.o
+ *fill*         0x80004b6d        0x3 
+ .rodata.__FUNCTION__.1
+                0x80004b70        0xe src/timer.o
+ *fill*         0x80004b7e        0x2 
+ .rodata.__FUNCTION__.3
+                0x80004b80        0xf src/timer.o
+ *fill*         0x80004b8f        0x1 
+ .rodata.__FUNCTION__.5
+                0x80004b90       0x10 src/timer.o
+ .rodata.__FUNCTION__.6
+                0x80004ba0        0xe src/timer.o
+ .rodata.rt_device_unregister.str1.4
+                0x80004bae        0x0 device/device.o
+                                 0x74 (size before relaxing)
+ .rodata.rt_device_init.str1.4
+                0x80004bae        0x0 device/device.o
+                                 0x36 (size before relaxing)
+ .rodata.rt_device_open.str1.4
+                0x80004bae        0x0 device/device.o
+                                 0x14 (size before relaxing)
+ *fill*         0x80004bae        0x2 
+ .rodata.__FUNCTION__.1
+                0x80004bb0       0x1a device/device.o
+ *fill*         0x80004bca        0x2 
+ .rodata.__FUNCTION__.3
+                0x80004bcc       0x10 device/device.o
+ .rodata.__FUNCTION__.4
+                0x80004bdc        0xf device/device.o
+ *fill*         0x80004beb        0x1 
+ .rodata.__FUNCTION__.5
+                0x80004bec       0x10 device/device.o
+ .rodata.__FUNCTION__.6
+                0x80004bfc        0xf device/device.o
+ .rodata.rt_hw_board_init.str1.4
+                0x80004c0b        0x0 bsp/board.o
+                                 0x42 (size before relaxing)
+ .rodata.finsh_rx_ind.str1.4
+                0x80004c0b        0x0 finsh/shell.o
+                                 0x11 (size before relaxing)
+ .rodata.finsh_get_prompt.str1.4
+                0x80004c0b        0x0 finsh/shell.o
+                                 0x12 (size before relaxing)
+ .rodata.finsh_system_init.str1.4
+                0x80004c0b        0x0 finsh/shell.o
+                                 0x25 (size before relaxing)
+ .rodata.finsh_set_device.str1.4
+                0x80004c0b        0x0 finsh/shell.o
+                                 0x20 (size before relaxing)
+ .rodata.finsh_thread_entry.str1.4
+                0x80004c0b        0x0 finsh/shell.o
+                                 0x23 (size before relaxing)
+ *fill*         0x80004c0b        0x1 
+ .rodata.finsh_thread_entry
+                0x80004c0c       0x38 finsh/shell.o
+ .rodata.__FUNCTION__.0
+                0x80004c44        0xe finsh/shell.o
+ *fill*         0x80004c52        0x2 
+ .rodata.__FUNCTION__.4
+                0x80004c54        0xd finsh/shell.o
+ *fill*         0x80004c61        0x3 
+ .rodata.__FUNCTION__.5
+                0x80004c64       0x11 finsh/shell.o
+ *fill*         0x80004c75        0x3 
+ .rodata.__FUNCTION__.6
+                0x80004c78       0x16 finsh/shell.o
+ .rodata.hello.str1.4
+                0x80004c8e        0x0 finsh/cmd.o
+                                 0x12 (size before relaxing)
+ .rodata.list.str1.4
+                0x80004c8e        0x0 finsh/cmd.o
+                                 0x25 (size before relaxing)
+ .rodata.object_split.constprop.0.str1.4
+                0x80004c8e        0x0 finsh/cmd.o
+                                  0x2 (size before relaxing)
+ .rodata.list_timer.str1.4
+                0x80004c8e        0x0 finsh/cmd.o
+                                 0x9d (size before relaxing)
+ .rodata.list_thread.str1.4
+                0x80004c8e        0x0 finsh/cmd.o
+                                 0xfc (size before relaxing)
+ *fill*         0x80004c8e        0x2 
+ .rodata.list_thread
+                0x80004c90       0x14 finsh/cmd.o
+ .rodata.list_device.str1.4
+                0x80004ca4        0x0 finsh/cmd.o
+                                 0x77 (size before relaxing)
+ .rodata.list_sem.str1.4
+                0x80004ca4        0x0 finsh/cmd.o
+                                 0x6c (size before relaxing)
+ .rodata.name   0x80004ca4      0x1c6 finsh/cmd.o
+                0x80004ca4                __fsym_list_desc
+                0x80004cc0                __fsym_list_name
+                0x80004cc8                __fsym___cmd_list_device_desc
+                0x80004ce0                __fsym___cmd_list_device_name
+                0x80004cf4                __fsym_list_device_desc
+                0x80004d0c                __fsym_list_device_name
+                0x80004d18                __fsym___cmd_list_timer_desc
+                0x80004d30                __fsym___cmd_list_timer_name
+                0x80004d44                __fsym_list_timer_desc
+                0x80004d5c                __fsym_list_timer_name
+                0x80004d68                __fsym___cmd_list_sem_desc
+                0x80004d84                __fsym___cmd_list_sem_name
+                0x80004d94                __fsym_list_sem_desc
+                0x80004db0                __fsym_list_sem_name
+                0x80004dbc                __fsym___cmd_list_thread_desc
+                0x80004dc8                __fsym___cmd_list_thread_name
+                0x80004ddc                __fsym_list_thread_desc
+                0x80004de8                __fsym_list_thread_name
+                0x80004df4                __fsym___cmd_version_desc
+                0x80004e18                __fsym___cmd_version_name
+                0x80004e28                __fsym_version_desc
+                0x80004e4c                __fsym_version_name
+                0x80004e54                __fsym_hello_desc
+                0x80004e64                __fsym_hello_name
+ .rodata.str1.4
+                0x80004e6a        0x0 finsh/cmd.o
+                                0x12c (size before relaxing)
+ *fill*         0x80004e6a        0x2 
+ .rodata.device_type_str
+                0x80004e6c       0x58 finsh/cmd.o
+ .rodata.msh_help.str1.4
+                0x80004ec4        0x0 finsh/msh.o
+                                 0x32 (size before relaxing)
+ .rodata.msh_exec.str1.4
+                0x80004ec4        0x0 finsh/msh.o
+                                 0x3c (size before relaxing)
+ .rodata.msh_auto_complete.str1.4
+                0x80004ec4        0x0 finsh/msh.o
+                                  0x4 (size before relaxing)
+ .rodata.name   0x80004ec4       0x7f finsh/msh.o
+                0x80004ec4                __fsym___cmd_free_desc
+                0x80004eec                __fsym___cmd_free_name
+                0x80004ef8                __fsym___cmd_ps_desc
+                0x80004f14                __fsym___cmd_ps_name
+                0x80004f20                __fsym___cmd_help_desc
+                0x80004f38                __fsym___cmd_help_name
+ .rodata.main.str1.4
+                0x80004f43        0x0 applications/main.o
+                                 0x26 (size before relaxing)
+ *(.srodata .srodata.*)
+ *fill*         0x80004f43        0x1 
+ .srodata.__FUNCTION__.0
+                0x80004f44        0x8 src/mem.o
+                0x80004f4c                        . = ALIGN (0x4)
+                0x80004f4c                        __fsymtab_start = .
+ *(FSymTab)
+ FSymTab        0x80004f4c        0xc src/mem.o
+                0x80004f4c                __fsym_list_mem
+ FSymTab        0x80004f58       0x90 finsh/cmd.o
+                0x80004f58                __fsym_list
+                0x80004f64                __fsym___cmd_list_device
+                0x80004f70                __fsym_list_device
+                0x80004f7c                __fsym___cmd_list_timer
+                0x80004f88                __fsym_list_timer
+                0x80004f94                __fsym___cmd_list_sem
+                0x80004fa0                __fsym_list_sem
+                0x80004fac                __fsym___cmd_list_thread
+                0x80004fb8                __fsym_list_thread
+                0x80004fc4                __fsym___cmd_version
+                0x80004fd0                __fsym_version
+                0x80004fdc                __fsym_hello
+ FSymTab        0x80004fe8       0x24 finsh/msh.o
+                0x80004fe8                __fsym___cmd_free
+                0x80004ff4                __fsym___cmd_ps
+                0x80005000                __fsym___cmd_help
+                0x8000500c                        __fsymtab_end = .
+                0x8000500c                        . = ALIGN (0x4)
+                0x8000500c                        __vsymtab_start = .
+ *(VSymTab)
+                0x8000500c                        __vsymtab_end = .
+
+.rela.dyn       0x8000500c        0x0
+ .rela.text.init
+                0x8000500c        0x0 start.o
+ .rela.text.rt_hw_board_init
+                0x8000500c        0x0 start.o
+ .rela.text.finsh_system_init
+                0x8000500c        0x0 start.o
+
+.data           0x8000500c       0x40
+                0x8000500c                        _data_start = .
+ *(.data .data.*)
+ .data.rt_object_container
+                0x8000500c       0x40 src/object.o
+                0x8000584c                        PROVIDE (__global_pointer$ = (. + 0x800))
+ *(.sdata .sdata.*)
+                0x8000504c                        _data_end = .
+
+.bss            0x8000504c      0x610
+                0x8000504c                        _bss_start = .
+ *(.bss .bss.*)
+ .bss.irq_desc_table
+                0x8000504c      0x100 libcpu/interrupt.o
+ .bss.rt_thread_stack
+                0x8000514c      0x100 src/idle.o
+ .bss.idle      0x8000524c       0x78 src/idle.o
+ .bss.rt_log_buf.0
+                0x800052c4      0x100 src/kservice.o
+ .bss.heap_sem  0x800053c4       0x20 src/mem.o
+ .bss.rt_thread_priority_table
+                0x800053e4      0x100 src/scheduler.o
+                0x800053e4                rt_thread_priority_table
+ .bss.finsh_prompt.8
+                0x800054e4      0x101 finsh/shell.o
+ *(.sbss .sbss.*)
+ *fill*         0x800055e5        0x3 
+ .sbss.rt_thread_switch_interrupt_flag
+                0x800055e8        0x4 libcpu/cpuport.o
+                0x800055e8                rt_thread_switch_interrupt_flag
+ .sbss.rt_interrupt_to_thread
+                0x800055ec        0x4 libcpu/cpuport.o
+                0x800055ec                rt_interrupt_to_thread
+ .sbss.rt_interrupt_from_thread
+                0x800055f0        0x4 libcpu/cpuport.o
+                0x800055f0                rt_interrupt_from_thread
+ .sbss.rt_tick  0x800055f4        0x4 src/clock.o
+ .sbss.rt_interrupt_nest
+                0x800055f8        0x1 src/irq.o
+                0x800055f8                rt_interrupt_nest
+ *fill*         0x800055f9        0x3 
+ .sbss.rt_assert_hook
+                0x800055fc        0x4 src/kservice.o
+                0x800055fc                rt_assert_hook
+ .sbss._console_device
+                0x80005600        0x4 src/kservice.o
+ .sbss.__rt_errno
+                0x80005604        0x4 src/kservice.o
+ .sbss.max_mem  0x80005608        0x4 src/mem.o
+ .sbss.used_mem
+                0x8000560c        0x4 src/mem.o
+ .sbss.mem_size_aligned
+                0x80005610        0x4 src/mem.o
+ .sbss.lfree    0x80005614        0x4 src/mem.o
+ .sbss.heap_end
+                0x80005618        0x4 src/mem.o
+ .sbss.heap_ptr
+                0x8000561c        0x4 src/mem.o
+ .sbss.rt_thread_defunct
+                0x80005620        0x8 src/scheduler.o
+                0x80005620                rt_thread_defunct
+ .sbss.rt_thread_ready_priority_group
+                0x80005628        0x4 src/scheduler.o
+                0x80005628                rt_thread_ready_priority_group
+ .sbss.rt_current_priority
+                0x8000562c        0x1 src/scheduler.o
+                0x8000562c                rt_current_priority
+ *fill*         0x8000562d        0x3 
+ .sbss.rt_current_thread
+                0x80005630        0x4 src/scheduler.o
+                0x80005630                rt_current_thread
+ .sbss.rt_scheduler_lock_nest
+                0x80005634        0x2 src/scheduler.o
+ *fill*         0x80005636        0x2 
+ .sbss.random_nr.2
+                0x80005638        0x4 src/timer.o
+ .sbss.rt_timer_list
+                0x8000563c        0x8 src/timer.o
+ .sbss.finsh_prompt_custom
+                0x80005644        0x4 finsh/shell.o
+ .sbss.shell    0x80005648        0x4 finsh/shell.o
+                0x80005648                shell
+ .sbss._sysvar_table_end
+                0x8000564c        0x4 finsh/shell.o
+                0x8000564c                _sysvar_table_end
+ .sbss._sysvar_table_begin
+                0x80005650        0x4 finsh/shell.o
+                0x80005650                _sysvar_table_begin
+ .sbss._syscall_table_end
+                0x80005654        0x4 finsh/shell.o
+                0x80005654                _syscall_table_end
+ .sbss._syscall_table_begin
+                0x80005658        0x4 finsh/shell.o
+                0x80005658                _syscall_table_begin
+ *(COMMON)
+                0x8000565c                        . = ALIGN (0x4)
+                0x8000565c                        _bss_end = .
+
+.heap           0x80005660     0x4000
+                0x80005660                        __heap_start = .
+                0x80009660                        . = (. + _heap_size)
+ *fill*         0x80005660     0x4000 
+                0x80009660                        __heap_end = .
+
+.stack          0x80009660     0x2000
+                0x80009660                        __stack_start = .
+                0x8000b660                        . = (. + _stack_size)
+ *fill*         0x80009660     0x2000 
+                0x8000b660                        . = ALIGN (0x10)
+                0x8000b660                        __stack_top = .
+                0x8000b660                        _system_ram_end = .
+
+/DISCARD/
+ *(.eh_frame)
+OUTPUT(rtthread.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x5b
+ .riscv.attributes
+                0x00000000       0x55 start.o
+ .riscv.attributes
+                0x00000055       0x59 libcpu/context_gcc.o
+ .riscv.attributes
+                0x000000ae       0x59 libcpu/trap_entry.o
+ .riscv.attributes
+                0x00000107       0x57 libcpu/cpuport.o
+ .riscv.attributes
+                0x0000015e       0x5b libcpu/interrupt.o
+ .riscv.attributes
+                0x000001b9       0x57 src/clock.o
+ .riscv.attributes
+                0x00000210       0x57 src/components.o
+ .riscv.attributes
+                0x00000267       0x57 src/idle.o
+ .riscv.attributes
+                0x000002be       0x57 src/ipc.o
+ .riscv.attributes
+                0x00000315       0x57 src/irq.o
+ .riscv.attributes
+                0x0000036c       0x57 src/kservice.o
+ .riscv.attributes
+                0x000003c3       0x57 src/mem.o
+ .riscv.attributes
+                0x0000041a       0x57 src/object.o
+ .riscv.attributes
+                0x00000471       0x57 src/scheduler.o
+ .riscv.attributes
+                0x000004c8       0x57 src/thread.o
+ .riscv.attributes
+                0x0000051f       0x57 src/timer.o
+ .riscv.attributes
+                0x00000576       0x57 device/device.o
+ .riscv.attributes
+                0x000005cd       0x57 bsp/board.o
+ .riscv.attributes
+                0x00000624       0x57 finsh/shell.o
+ .riscv.attributes
+                0x0000067b       0x57 finsh/cmd.o
+ .riscv.attributes
+                0x000006d2       0x57 finsh/msh.o
+ .riscv.attributes
+                0x00000729       0x57 applications/main.o
+ .riscv.attributes
+                0x00000780       0x4e D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+ .riscv.attributes
+                0x000007ce       0x4e D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+ .riscv.attributes
+                0x0000081c       0x4e D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+ .riscv.attributes
+                0x0000086a       0x4c D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
+ .riscv.attributes
+                0x000008b6       0x4e D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+ .riscv.attributes
+                0x00000904       0x4e D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+ .riscv.attributes
+                0x00000952       0x4e D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 libcpu/cpuport.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 libcpu/interrupt.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/clock.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/components.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/idle.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/ipc.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/irq.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/kservice.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/mem.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/object.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/scheduler.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/thread.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 src/timer.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 device/device.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 bsp/board.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 finsh/shell.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 finsh/cmd.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 finsh/msh.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 applications/main.o
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+                                 0x34 (size before relaxing)
+ .comment       0x00000033        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+                                 0x34 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 libcpu/cpuport.o
+ .note.GNU-stack
+                0x00000000        0x0 libcpu/interrupt.o
+ .note.GNU-stack
+                0x00000000        0x0 src/clock.o
+ .note.GNU-stack
+                0x00000000        0x0 src/components.o
+ .note.GNU-stack
+                0x00000000        0x0 src/idle.o
+ .note.GNU-stack
+                0x00000000        0x0 src/ipc.o
+ .note.GNU-stack
+                0x00000000        0x0 src/irq.o
+ .note.GNU-stack
+                0x00000000        0x0 src/kservice.o
+ .note.GNU-stack
+                0x00000000        0x0 src/mem.o
+ .note.GNU-stack
+                0x00000000        0x0 src/object.o
+ .note.GNU-stack
+                0x00000000        0x0 src/scheduler.o
+ .note.GNU-stack
+                0x00000000        0x0 src/thread.o
+ .note.GNU-stack
+                0x00000000        0x0 src/timer.o
+ .note.GNU-stack
+                0x00000000        0x0 device/device.o
+ .note.GNU-stack
+                0x00000000        0x0 bsp/board.o
+ .note.GNU-stack
+                0x00000000        0x0 finsh/shell.o
+ .note.GNU-stack
+                0x00000000        0x0 finsh/cmd.o
+ .note.GNU-stack
+                0x00000000        0x0 finsh/msh.o
+ .note.GNU-stack
+                0x00000000        0x0 applications/main.o
+ .note.GNU-stack
+                0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+ .note.GNU-stack
+                0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+ .note.GNU-stack
+                0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+ .note.GNU-stack
+                0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+ .note.GNU-stack
+                0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+ .note.GNU-stack
+                0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+
+.debug_info     0x00000000     0xdd92
+ .debug_info    0x00000000      0x3c2 libcpu/cpuport.o
+ .debug_info    0x000003c2      0xa2f libcpu/interrupt.o
+ .debug_info    0x00000df1      0x440 src/clock.o
+ .debug_info    0x00001231      0x62a src/components.o
+ .debug_info    0x0000185b      0x725 src/idle.o
+ .debug_info    0x00001f80     0x1260 src/ipc.o
+ .debug_info    0x000031e0      0x14a src/irq.o
+ .debug_info    0x0000332a     0x1790 src/kservice.o
+ .debug_info    0x00004aba      0xdfd src/mem.o
+ .debug_info    0x000058b7      0xb35 src/object.o
+ .debug_info    0x000063ec      0x80d src/scheduler.o
+ .debug_info    0x00006bf9     0x1852 src/thread.o
+ .debug_info    0x0000844b      0xed9 src/timer.o
+ .debug_info    0x00009324     0x102d device/device.o
+ .debug_info    0x0000a351      0x37d bsp/board.o
+ .debug_info    0x0000a6ce     0x147a finsh/shell.o
+ .debug_info    0x0000bb48     0x17cb finsh/cmd.o
+ .debug_info    0x0000d313      0x974 finsh/msh.o
+ .debug_info    0x0000dc87      0x10b applications/main.o
+
+.debug_abbrev   0x00000000     0x38e4
+ .debug_abbrev  0x00000000      0x1c6 libcpu/cpuport.o
+ .debug_abbrev  0x000001c6      0x338 libcpu/interrupt.o
+ .debug_abbrev  0x000004fe      0x1c9 src/clock.o
+ .debug_abbrev  0x000006c7      0x24a src/components.o
+ .debug_abbrev  0x00000911      0x2ff src/idle.o
+ .debug_abbrev  0x00000c10      0x3a9 src/ipc.o
+ .debug_abbrev  0x00000fb9      0x106 src/irq.o
+ .debug_abbrev  0x000010bf      0x492 src/kservice.o
+ .debug_abbrev  0x00001551      0x37e src/mem.o
+ .debug_abbrev  0x000018cf      0x33c src/object.o
+ .debug_abbrev  0x00001c0b      0x2ea src/scheduler.o
+ .debug_abbrev  0x00001ef5      0x3a1 src/thread.o
+ .debug_abbrev  0x00002296      0x427 src/timer.o
+ .debug_abbrev  0x000026bd      0x2aa device/device.o
+ .debug_abbrev  0x00002967      0x234 bsp/board.o
+ .debug_abbrev  0x00002b9b      0x4eb finsh/shell.o
+ .debug_abbrev  0x00003086      0x431 finsh/cmd.o
+ .debug_abbrev  0x000034b7      0x36c finsh/msh.o
+ .debug_abbrev  0x00003823       0xc1 applications/main.o
+
+.debug_loclists
+                0x00000000     0x51a2
+ .debug_loclists
+                0x00000000       0x8e libcpu/cpuport.o
+ .debug_loclists
+                0x0000008e      0x3de libcpu/interrupt.o
+ .debug_loclists
+                0x0000046c       0xa2 src/clock.o
+ .debug_loclists
+                0x0000050e       0x8f src/components.o
+ .debug_loclists
+                0x0000059d       0x76 src/idle.o
+ .debug_loclists
+                0x00000613      0x49e src/ipc.o
+ .debug_loclists
+                0x00000ab1       0x22 src/irq.o
+ .debug_loclists
+                0x00000ad3     0x186d src/kservice.o
+ .debug_loclists
+                0x00002340      0x5c0 src/mem.o
+ .debug_loclists
+                0x00002900      0x3ef src/object.o
+ .debug_loclists
+                0x00002cef      0x19d src/scheduler.o
+ .debug_loclists
+                0x00002e8c      0x7e0 src/thread.o
+ .debug_loclists
+                0x0000366c      0x4d3 src/timer.o
+ .debug_loclists
+                0x00003b3f      0x6a1 device/device.o
+ .debug_loclists
+                0x000041e0       0xd7 bsp/board.o
+ .debug_loclists
+                0x000042b7      0x22e finsh/shell.o
+ .debug_loclists
+                0x000044e5      0x7f8 finsh/cmd.o
+ .debug_loclists
+                0x00004cdd      0x4c5 finsh/msh.o
+
+.debug_aranges  0x00000000      0x780
+ .debug_aranges
+                0x00000000       0x30 libcpu/cpuport.o
+ .debug_aranges
+                0x00000030       0x40 libcpu/interrupt.o
+ .debug_aranges
+                0x00000070       0x40 src/clock.o
+ .debug_aranges
+                0x000000b0       0x68 src/components.o
+ .debug_aranges
+                0x00000118       0x38 src/idle.o
+ .debug_aranges
+                0x00000150       0x60 src/ipc.o
+ .debug_aranges
+                0x000001b0       0x30 src/irq.o
+ .debug_aranges
+                0x000001e0      0x110 src/kservice.o
+ .debug_aranges
+                0x000002f0       0x58 src/mem.o
+ .debug_aranges
+                0x00000348       0x60 src/object.o
+ .debug_aranges
+                0x000003a8       0x58 src/scheduler.o
+ .debug_aranges
+                0x00000400       0xa0 src/thread.o
+ .debug_aranges
+                0x000004a0       0x78 src/timer.o
+ .debug_aranges
+                0x00000518       0x88 device/device.o
+ .debug_aranges
+                0x000005a0       0x98 bsp/board.o
+ .debug_aranges
+                0x00000638       0x80 finsh/shell.o
+ .debug_aranges
+                0x000006b8       0x60 finsh/cmd.o
+ .debug_aranges
+                0x00000718       0x48 finsh/msh.o
+ .debug_aranges
+                0x00000760       0x20 applications/main.o
+
+.debug_rnglists
+                0x00000000      0x9cb
+ .debug_rnglists
+                0x00000000       0x1f libcpu/cpuport.o
+ .debug_rnglists
+                0x0000001f       0x45 libcpu/interrupt.o
+ .debug_rnglists
+                0x00000064       0x2b src/clock.o
+ .debug_rnglists
+                0x0000008f       0x49 src/components.o
+ .debug_rnglists
+                0x000000d8       0x77 src/idle.o
+ .debug_rnglists
+                0x0000014f       0x9f src/ipc.o
+ .debug_rnglists
+                0x000001ee       0x1f src/irq.o
+ .debug_rnglists
+                0x0000020d      0x112 src/kservice.o
+ .debug_rnglists
+                0x0000031f       0x62 src/mem.o
+ .debug_rnglists
+                0x00000381       0x98 src/object.o
+ .debug_rnglists
+                0x00000419       0x65 src/scheduler.o
+ .debug_rnglists
+                0x0000047e       0xf4 src/thread.o
+ .debug_rnglists
+                0x00000572       0x9d src/timer.o
+ .debug_rnglists
+                0x0000060f       0x67 device/device.o
+ .debug_rnglists
+                0x00000676       0x6d bsp/board.o
+ .debug_rnglists
+                0x000006e3       0xb9 finsh/shell.o
+ .debug_rnglists
+                0x0000079c      0x182 finsh/cmd.o
+ .debug_rnglists
+                0x0000091e       0x9a finsh/msh.o
+ .debug_rnglists
+                0x000009b8       0x13 applications/main.o
+
+.debug_line     0x00000000     0xb147
+ .debug_line    0x00000000      0x230 libcpu/cpuport.o
+ .debug_line    0x00000230      0x78c libcpu/interrupt.o
+ .debug_line    0x000009bc      0x1e1 src/clock.o
+ .debug_line    0x00000b9d      0x320 src/components.o
+ .debug_line    0x00000ebd      0x331 src/idle.o
+ .debug_line    0x000011ee      0xba2 src/ipc.o
+ .debug_line    0x00001d90      0x161 src/irq.o
+ .debug_line    0x00001ef1     0x1e79 src/kservice.o
+ .debug_line    0x00003d6a      0xdf3 src/mem.o
+ .debug_line    0x00004b5d      0x8ff src/object.o
+ .debug_line    0x0000545c      0x6e8 src/scheduler.o
+ .debug_line    0x00005b44     0x1294 src/thread.o
+ .debug_line    0x00006dd8      0xc72 src/timer.o
+ .debug_line    0x00007a4a      0xb44 device/device.o
+ .debug_line    0x0000858e      0x3a6 bsp/board.o
+ .debug_line    0x00008934      0xe7a finsh/shell.o
+ .debug_line    0x000097ae      0xf5f finsh/cmd.o
+ .debug_line    0x0000a70d      0x9a4 finsh/msh.o
+ .debug_line    0x0000b0b1       0x96 applications/main.o
+
+.debug_str      0x00000000     0x1ff9
+ .debug_str     0x00000000     0x1ff9 libcpu/cpuport.o
+                                0x290 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 libcpu/interrupt.o
+                                0x387 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/clock.o
+                                0x368 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/components.o
+                                0x49b (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/idle.o
+                                0x45c (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/ipc.o
+                                0x6d1 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/irq.o
+                                0x1ca (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/kservice.o
+                                0x8ce (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/mem.o
+                                0x445 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/object.o
+                                0x5a3 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/scheduler.o
+                                0x511 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/thread.o
+                                0x80a (size before relaxing)
+ .debug_str     0x00001ff9        0x0 src/timer.o
+                                0x5e7 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 device/device.o
+                                0x78f (size before relaxing)
+ .debug_str     0x00001ff9        0x0 bsp/board.o
+                                0x31a (size before relaxing)
+ .debug_str     0x00001ff9        0x0 finsh/shell.o
+                                0x9cb (size before relaxing)
+ .debug_str     0x00001ff9        0x0 finsh/cmd.o
+                                0xbf9 (size before relaxing)
+ .debug_str     0x00001ff9        0x0 finsh/msh.o
+                                0x3df (size before relaxing)
+ .debug_str     0x00001ff9        0x0 applications/main.o
+                                0x171 (size before relaxing)
+
+.debug_line_str
+                0x00000000      0x3d1
+ .debug_line_str
+                0x00000000      0x3d1 libcpu/cpuport.o
+                                 0x56 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 libcpu/interrupt.o
+                                 0x5f (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/clock.o
+                                 0x4c (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/components.o
+                                 0x56 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/idle.o
+                                 0x56 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/ipc.o
+                                 0x54 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/irq.o
+                                 0x3d (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/kservice.o
+                                 0x4b (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/mem.o
+                                 0x5a (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/object.o
+                                 0x5a (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/scheduler.o
+                                 0x60 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/thread.o
+                                 0x5a (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 src/timer.o
+                                 0x58 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 device/device.o
+                                 0x4d (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 bsp/board.o
+                                 0x54 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 finsh/shell.o
+                                0x29f (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 finsh/cmd.o
+                                0x17b (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 finsh/msh.o
+                                0x168 (size before relaxing)
+ .debug_line_str
+                0x000003d1        0x0 applications/main.o
+                                 0x55 (size before relaxing)
+
+.debug_frame    0x00000000     0x189c
+ .debug_frame   0x00000000       0x4c libcpu/cpuport.o
+ .debug_frame   0x0000004c       0x84 libcpu/interrupt.o
+ .debug_frame   0x000000d0       0x7c src/clock.o
+ .debug_frame   0x0000014c      0x108 src/components.o
+ .debug_frame   0x00000254       0xa4 src/idle.o
+ .debug_frame   0x000002f8      0x174 src/ipc.o
+ .debug_frame   0x0000046c       0x58 src/irq.o
+ .debug_frame   0x000004c4      0x354 src/kservice.o
+ .debug_frame   0x00000818      0x184 src/mem.o
+ .debug_frame   0x0000099c      0x144 src/object.o
+ .debug_frame   0x00000ae0       0xf8 src/scheduler.o
+ .debug_frame   0x00000bd8      0x2ac src/thread.o
+ .debug_frame   0x00000e84      0x1a0 src/timer.o
+ .debug_frame   0x00001024      0x22c device/device.o
+ .debug_frame   0x00001250      0x130 bsp/board.o
+ .debug_frame   0x00001380      0x1dc finsh/shell.o
+ .debug_frame   0x0000155c      0x200 finsh/cmd.o
+ .debug_frame   0x0000175c      0x118 finsh/msh.o
+ .debug_frame   0x00001874       0x28 applications/main.o

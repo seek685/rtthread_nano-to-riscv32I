@@ -14,6 +14,9 @@
 extern unsigned char __heap_start;
 extern unsigned char __heap_end;
 
+/* 弱函数：平台可覆盖 */
+RT_WEAK void rt_hw_uart_init(void);
+
 /* ==================================================================
  *  板级初始化
  * ================================================================== */
@@ -35,16 +38,21 @@ void rt_hw_board_init(void)
     rt_system_heap_init(HEAP_BEGIN, HEAP_END);
 
 #ifdef RT_USING_CONSOLE
-    /* ---- 3. UART ---- */
+    /* NS16550A UART 无需软件初始化，直接可用 */
     rt_hw_uart_init();
 #endif
 
 #ifdef RT_DEBUG
-    rt_kprintf("RISC-V 32I RT-Thread Nano 启动。\n");
-    rt_kprintf("CPU: %lu Hz  堆: %lu 字节\n",
+    rt_kprintf("RISC-V 32I RT-Thread Nano Boot.\n");
+    rt_kprintf("CPU: %lu Hz  Heap: %lu bytes\n",
                (unsigned long)CPU_FREQ,
                (unsigned long)(HEAP_END - HEAP_BEGIN + 1));
 #endif
+}
+
+/* QEMU NS16550A 无需初始化，其他平台可覆盖此弱函数 */
+RT_WEAK void rt_hw_uart_init(void)
+{
 }
 
 /* ==================================================================
@@ -91,16 +99,15 @@ void rt_hw_console_output(const char *str)
 {
     while (*str)
     {
-        /* 等待发送保持寄存器为空 (LSR bit 5) */
-        while ((*(volatile unsigned int *)(UART_BASE_ADDR + 0x14) & 0x20) == 0) {}
+        /* QEMU NS16550A: LSR 在 0x05 (1字节间距), bit5=THR空 */
+        while ((*(volatile unsigned char *)(UART_BASE_ADDR + 0x05) & 0x20) == 0) {}
 
-        *(volatile unsigned int *)(UART_BASE_ADDR) = (unsigned int)(*str);
+        *(volatile unsigned char *)(UART_BASE_ADDR) = (unsigned char)(*str);
 
-        /* \n → \r\n */
         if (*str == '\n')
         {
-            while ((*(volatile unsigned int *)(UART_BASE_ADDR + 0x14) & 0x20) == 0) {}
-            *(volatile unsigned int *)(UART_BASE_ADDR) = '\r';
+            while ((*(volatile unsigned char *)(UART_BASE_ADDR + 0x05) & 0x20) == 0) {}
+            *(volatile unsigned char *)(UART_BASE_ADDR) = '\r';
         }
         str++;
     }
@@ -111,6 +118,36 @@ void rt_hw_console_output(const char *str)
 RT_WEAK void rt_hw_console_output(const char *str)
 {
     (void)str;
+}
+
+#endif /* RT_USING_CONSOLE */
+
+/* ==================================================================
+ *  控制台输入 —— finsh 需要此函数读取键盘输入
+ * ================================================================== */
+
+#if defined(RT_USING_CONSOLE) && (UART_BASE_ADDR != 0)
+
+/**
+ * 从 UART 读取一个字符（阻塞，轮询模式）
+ * 返回 -1 表示无数据可读
+ */
+RT_WEAK char rt_hw_console_getchar(void)
+{
+    /* QEMU NS16550A: LSR 在 0x05, bit0=数据就绪 */
+    if ((*(volatile unsigned char *)(UART_BASE_ADDR + 0x05) & 0x01) == 0)
+    {
+        return -1;
+    }
+
+    return (char)(*(volatile unsigned char *)(UART_BASE_ADDR));
+}
+
+#else
+
+RT_WEAK char rt_hw_console_getchar(void)
+{
+    return -1;
 }
 
 #endif /* RT_USING_CONSOLE */
@@ -135,11 +172,11 @@ RT_WEAK void rt_hw_us_delay(rt_uint32_t us)
 RT_WEAK void rt_hw_show_memory(rt_uint32_t addr, rt_uint32_t size)
 {
     (void)addr; (void)size;
-    rt_kprintf("rt_hw_show_memory: 未实现\n");
+    rt_kprintf("rt_hw_show_memory: not implemented\n");
 }
 
 RT_WEAK void rt_hw_backtrace(rt_uint32_t *fp, rt_uint32_t thread_entry)
 {
     (void)fp; (void)thread_entry;
-    rt_kprintf("rt_hw_backtrace: 未实现\n");
+    rt_kprintf("rt_hw_backtrace: not implemented\n");
 }

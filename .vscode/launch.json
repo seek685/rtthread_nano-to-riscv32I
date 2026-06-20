@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug RISC-V QEMU",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/your_program.elf", /* 替换为你的elf路径 */
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/RISCV32I",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/riscv-none-elf-gdb.exe", /* 你的RISC-V GDB路径，32位和64位GDB通常是同一个执行文件 */
+            "miDebuggerServerAddress": "localhost:1234",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "customLaunchSetupCommands": [
+                {
+                    "text": "target remote localhost:1234"
+                },
+                {
+                    "text": "load" /* 将符号和代码同步给GDB */
+                }
+            ]
+        }
+    ]
+}

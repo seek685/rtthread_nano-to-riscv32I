@@ -1,15 +1,12 @@
 /*
- * context_gcc.S - RISC-V 上下文切换与中断操作
- * 配合无 Flash 纯 RAM 启动文件 start.S 和 trap_entry.S
+ * Copyright (c) 2006-2018, RT-Thread Development Team
  *
- * 帧格式:
- *  0*REGBYTES : mepc
- *  1*REGBYTES : ra
- *  2*REGBYTES : mstatus (完整)
- *  3*REGBYTES : gp
- *  4*REGBYTES : tp
- *  ...         (x5~x31)
- * 31*REGBYTES : t6
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Change Logs:
+ * Date           Author       Notes
+ * 2018/10/28     Bernard      The unify RISC-V porting implementation
+ * 2018/12/27     Jesven       Add SMP support
  */
 
 #include "cpuport.h"
@@ -19,51 +16,75 @@
 #define rt_hw_interrupt_enable  rt_hw_local_irq_enable
 #endif
 
+/*
+ * rt_base_t rt_hw_interrupt_disable(void);
+ */
     .globl rt_hw_interrupt_disable
 rt_hw_interrupt_disable:
-    csrrci a0, mstatus, 8          /* 清 MIE，返回原值 */
+    csrrci a0, mstatus, 8
     ret
 
+/*
+ * void rt_hw_interrupt_enable(rt_base_t level);
+ */
     .globl rt_hw_interrupt_enable
 rt_hw_interrupt_enable:
     csrw mstatus, a0
     ret
 
-/* 首次调度，sp 直接从目标线程栈恢复 */
+/*
+ * #ifdef RT_USING_SMP
+ * void rt_hw_context_switch_to(rt_ubase_t to, stuct rt_thread *to_thread);
+ * #else
+ * void rt_hw_context_switch_to(rt_ubase_t to);
+ * #endif
+ * a0 --> to
+ * a1 --> to_thread
+ */
     .globl rt_hw_context_switch_to
 rt_hw_context_switch_to:
-    LOAD sp, (a0)                  /* sp = to_thread->sp */
+    LOAD sp, (a0)
+
 #ifdef RT_USING_SMP
-    mv   a0, a1
-    call rt_cpus_lock_status_restore
+    mv   a0,   a1
+    jal  rt_cpus_lock_status_restore
 #endif
+    LOAD a0,   2 * REGBYTES(sp)
+    csrw mstatus, a0
     j    rt_hw_context_switch_exit
 
-/* 线程到线程切换 */
+/*
+ * #ifdef RT_USING_SMP
+ * void rt_hw_context_switch(rt_ubase_t from, rt_ubase_t to, struct rt_thread *to_thread);
+ * #else
+ * void rt_hw_context_switch(rt_ubase_t from, rt_ubase_t to);
+ * #endif
+ *
+ * a0 --> from
+ * a1 --> to
+ * a2 --> to_thread
+ */
     .globl rt_hw_context_switch
 rt_hw_context_switch:
-    /* 在栈上开辟帧 */
-    addi  sp, sp, -32 * REGBYTES
-    STORE sp, (a0)                 /* 保存当前 sp 到 from_thread->sp */
+    /* saved from thread context
+     *     x1/ra       -> sp(0)
+     *     x1/ra       -> sp(1)
+     *     mstatus.mie -> sp(2)
+     *     x(i)        -> sp(i-4)
+     */
+    addi  sp,  sp, -32 * REGBYTES
+    STORE sp,  (a0)
 
-    /* 保存 mepc（用 ra 冒充，因为函数返回后继续执行点就是 ra */
-    STORE ra, 0 * REGBYTES(sp)
-    STORE ra, 1 * REGBYTES(sp)     /* 冗余但无害 */
+    STORE x1,   0 * REGBYTES(sp)
+    STORE x1,   1 * REGBYTES(sp)
 
-    /* 构造并保存 mstatus */
-    csrr   t0, mstatus
-    /* 保留 MPP 和 MPIE 相关位，设置 MPP=Machine, MPIE=MIE */
-    li     t1, 0x00001800          /* MPP=3 */
-    or     t0, t0, t1             /* 置 MPP */
-    andi   t2, t0, 8              /* 提取 MIE */
-    slli   t2, t2, 4              /* MIE → MPIE 位 (bit 7 = bit 3 << 4) */
-    li     t1, ~0x80
-    and    t0, t0, t1             /* 清 MPIE */
-    or     t0, t0, t2             /* 写入 MPIE */
-    STORE  t0, 2 * REGBYTES(sp)
+    csrr a0, mstatus
+    andi a0, a0, 8
+    beqz a0, save_mpie
+    li   a0, 0x80
+save_mpie:
+    STORE a0,   2 * REGBYTES(sp)
 
-    /* 保存所有 caller-saved + callee-saved 寄存器 */
-    STORE x3,   3 * REGBYTES(sp)   /* gp */
     STORE x4,   4 * REGBYTES(sp)
     STORE x5,   5 * REGBYTES(sp)
     STORE x6,   6 * REGBYTES(sp)
@@ -93,43 +114,71 @@ rt_hw_context_switch:
     STORE x30, 30 * REGBYTES(sp)
     STORE x31, 31 * REGBYTES(sp)
 
-    /* 切换到目标线程 */
-    LOAD sp, (a1)
-#ifdef RT_USING_SMP
-    mv   a0, a2
-    call rt_cpus_lock_status_restore
-#endif
-    j    rt_hw_context_switch_exit
+    /* restore to thread context
+     * sp(0) -> epc;
+     * sp(1) -> ra;
+     * sp(i) -> x(i+2)
+     */
+    LOAD sp,  (a1)
 
 #ifdef RT_USING_SMP
+    mv   a0,   a2
+    jal  rt_cpus_lock_status_restore
+#endif /*RT_USING_SMP*/
+
+    j rt_hw_context_switch_exit
+
+#ifdef RT_USING_SMP
+/*
+ * void rt_hw_context_switch_interrupt(void *context, rt_ubase_t from, rt_ubase_t to, struct rt_thread *to_thread);
+ *
+ * a0 --> context
+ * a1 --> from
+ * a2 --> to
+ * a3 --> to_thread
+ */
     .globl rt_hw_context_switch_interrupt
 rt_hw_context_switch_interrupt:
+
     STORE a0, 0(a1)
+
     LOAD  sp, 0(a2)
-    mv    a0, a3
-    call  rt_cpus_lock_status_restore
-    j     rt_hw_context_switch_exit
+    move  a0, a3
+    call rt_cpus_lock_status_restore
+
+    j rt_hw_context_switch_exit
+
 #endif
 
-/*
- * 公共恢复出口 —— 所有上下文切换和中断/异常最终汇聚于此
- * sp → 线程的 32 字帧
- */
 .global rt_hw_context_switch_exit
 rt_hw_context_switch_exit:
-    /* 恢复 mepc */
-    LOAD a0, 0 * REGBYTES(sp)
+#ifdef RT_USING_SMP
+#ifdef RT_USING_SIGNALS
+    mv a0, sp
+
+    csrr  t0, mhartid
+    /* switch interrupt stack of current cpu */
+    la    sp, __stack_start__
+    addi  t1, t0, 1
+    li    t2, __STACKSIZE__
+    mul   t1, t1, t2
+    add   sp, sp, t1 /* sp = (cpuid + 1) * __STACKSIZE__ + __stack_start__ */
+
+    call rt_signal_check
+    mv sp, a0
+#endif
+#endif
+    /* resw ra to mepc */
+    LOAD a0,   0 * REGBYTES(sp)
     csrw mepc, a0
 
-    /* 恢复 ra */
-    LOAD ra, 1 * REGBYTES(sp)
+    LOAD x1,   1 * REGBYTES(sp)
 
-    /* 恢复完整的 mstatus（已包含 MPP 和 MPIE 的正确设置） */
-    LOAD a0, 2 * REGBYTES(sp)
-    csrw mstatus, a0
+    li    t0, 0x00001800
+    csrs  mstatus, t0
+    LOAD a0,   2 * REGBYTES(sp)
+    csrs mstatus, a0
 
-    /* 恢复 x3~x31 */
-    LOAD x3,   3 * REGBYTES(sp)
     LOAD x4,   4 * REGBYTES(sp)
     LOAD x5,   5 * REGBYTES(sp)
     LOAD x6,   6 * REGBYTES(sp)
@@ -159,7 +208,5 @@ rt_hw_context_switch_exit:
     LOAD x30, 30 * REGBYTES(sp)
     LOAD x31, 31 * REGBYTES(sp)
 
-    /* 释放栈帧 */
-    addi sp, sp, 32 * REGBYTES
-
+    addi sp,  sp, 32 * REGBYTES
     mret
