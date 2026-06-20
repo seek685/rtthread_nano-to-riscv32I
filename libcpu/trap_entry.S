@@ -16,7 +16,6 @@
  *   3*REGBYTES  : gp  (x3)
  *   4*REGBYTES  : tp  (x4)
  *   5*REGBYTES  : t0  (x5)
- *   ...
  *  31*REGBYTES  : t6  (x31)
  */
 

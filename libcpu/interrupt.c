@@ -74,20 +74,33 @@ void rt_hw_interrupt_init(void)
      *   低 32 位: CLINT_MTIME_OFFSET
      *   高 32 位: CLINT_MTIME_OFFSET + 4
      *
-     * 简化处理: 将 mtimecmp 高 32 位设为 ~0，使比较只依赖低半部分。
-     * 对于典型 CPU 频率下的毫秒级节拍，此方法足够可靠。
+     * 写入 mtimecmp 的安全顺序（RV32）:
+     *   1. 先写 mtimecmp 低 32 位为 ~0（防止写入高半时意外触发）
+     *   2. 写入 mtimecmp 高 32 位
+     *   3. 写入 mtimecmp 低 32 位目标值
      */
     {
-        volatile unsigned long *mtime =
+        volatile unsigned long *mtime_lo =
             (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIME_OFFSET);
-        volatile unsigned long *mtimecmp =
+        volatile unsigned long *mtime_hi =
+            (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIME_OFFSET + 4);
+        volatile unsigned long *mtimecmp_lo =
             (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIMECMP_OFFSET);
+        volatile unsigned long *mtimecmp_hi =
+            (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIMECMP_OFFSET + 4);
 
-        unsigned long current_time = *mtime;
+        unsigned long lo = *mtime_lo;
+        unsigned long hi = *mtime_hi;
+        unsigned long next_lo = lo + TICK_CYCLES;
 
-        /* mtimecmp 高 32 位置为全 1，强制低半部分匹配即触发 */
-        *(volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIMECMP_OFFSET + 4) = ~0UL;
-        *mtimecmp = current_time + TICK_CYCLES;
+        /* 低 32 位溢出时进位到高 32 位 */
+        if (next_lo < lo)
+            hi++;
+
+        /* 安全写入: 先设低半为 ~0 防止误触发，再写高半，最后写低半 */
+        *mtimecmp_lo = ~0UL;
+        *mtimecmp_hi = hi;
+        *mtimecmp_lo = next_lo;
     }
 
     /* ---- 使能中断 ---- */
@@ -210,17 +223,31 @@ rt_isr_handler_t rt_hw_interrupt_install(int              vector,
  */
 static void rt_hw_timer_isr(int vector, void *param)
 {
-    volatile unsigned long *mtime =
+    volatile unsigned long *mtime_lo =
         (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIME_OFFSET);
-    volatile unsigned long *mtimecmp =
+    volatile unsigned long *mtime_hi =
+        (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIME_OFFSET + 4);
+    volatile unsigned long *mtimecmp_lo =
         (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIMECMP_OFFSET);
+    volatile unsigned long *mtimecmp_hi =
+        (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIMECMP_OFFSET + 4);
 
     (void)vector;
     (void)param;
 
     /* ---- 设置下一次定时器比较值 ---- */
-    unsigned long current_time = *mtime;
-    *mtimecmp = current_time + TICK_CYCLES;
+    unsigned long lo = *mtime_lo;
+    unsigned long hi = *mtime_hi;
+    unsigned long next_lo = lo + TICK_CYCLES;
+
+    /* 低 32 位溢出时进位到高 32 位 */
+    if (next_lo < lo)
+        hi++;
+
+    /* 安全写入: 先设低半为 ~0 防止误触发，再写高半，最后写低半 */
+    *mtimecmp_lo = ~0UL;
+    *mtimecmp_hi = hi;
+    *mtimecmp_lo = next_lo;
 
     /* ---- 通知 RT-Thread 内核一个 tick 已过去 ---- */
     rt_tick_increase();

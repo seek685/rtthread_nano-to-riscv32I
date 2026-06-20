@@ -160,20 +160,9 @@ size: $(TARGET)
 	$(SIZE) $(TARGET)
 
 clean:
-	rm -f $(OBJS) $(TARGET) $(TARGET_BIN) $(TARGET_HEX) rtthread.map rtthread.dump
+	rm -f $(OBJS) $(TARGET) $(TARGET_BIN) $(TARGET_HEX) rtthread.map rtthread.dump *.d libcpu/*.d bsp/*.d src/*.d finsh/*.d device/*.d applications/*.d
 	@echo "清理完成。"
 
-# ============== 依赖生成 ==============
-
-# 生成 .d 依赖文件，确保头文件变更后自动重新编译
-DEPS = $(OBJS:.o=.d)
--include $(DEPS)
-
-%.d: %.S
-	@$(AS) $(ASFLAGS) -MM $< | sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' > $@
-
-%.d: %.c
-	@$(CC) $(CFLAGS) -MM $< | sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' > $@
 
 # ============== 帮助 ==============
 
