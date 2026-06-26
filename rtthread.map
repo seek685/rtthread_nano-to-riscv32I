@@ -428,7 +428,7 @@ LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-ris
                 0x00004000                        _heap_size = 0x4000
                 0x80000000                        . = ORIGIN (RAM)
 
-.text           0x80000000     0x3a18
+.text           0x80000000     0x3a54
  *(.text.init)
  .text.init     0x80000000       0x34 start.o
                 0x80000000                _start
@@ -759,504 +759,504 @@ LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-ris
                 0x8000354e       0xd6 finsh/msh.o
                 0x8000354e                msh_auto_complete
  .text.startup.main
-                0x80003624       0x1a applications/main.o
+                0x80003624       0x56 applications/main.o
                 0x80003624                main
- .text.strcat   0x8000363e       0x68 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
-                0x8000363e                strcat
- .text.strncmp  0x800036a6       0x7a D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
-                0x800036a6                strncmp
- .text.strncpy  0x80003720       0x78 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
-                0x80003720                strncpy
- .text          0x80003798       0xa8 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
-                0x80003798                memset
- .text.memcpy   0x80003840       0xe8 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
-                0x80003840                memcpy
- .text.strlen   0x80003928       0x64 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
-                0x80003928                strlen
- .text.strcpy   0x8000398c       0x76 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
-                0x8000398c                strcpy
-                0x80003a04                        . = ALIGN (0x4)
- *fill*         0x80003a02        0x2 
-                0x80003a04                        __rt_init_start = .
+ .text.strcat   0x8000367a       0x68 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcat.o)
+                0x8000367a                strcat
+ .text.strncmp  0x800036e2       0x7a D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncmp.o)
+                0x800036e2                strncmp
+ .text.strncpy  0x8000375c       0x78 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strncpy.o)
+                0x8000375c                strncpy
+ .text          0x800037d4       0xa8 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memset.o)
+                0x800037d4                memset
+ .text.memcpy   0x8000387c       0xe8 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-memcpy.o)
+                0x8000387c                memcpy
+ .text.strlen   0x80003964       0x64 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strlen.o)
+                0x80003964                strlen
+ .text.strcpy   0x800039c8       0x76 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
+                0x800039c8                strcpy
+                0x80003a40                        . = ALIGN (0x4)
+ *fill*         0x80003a3e        0x2 
+                0x80003a40                        __rt_init_start = .
  *(SORT_BY_NAME(.rti_fn*))
- .rti_fn.0      0x80003a04        0x4 src/components.o
-                0x80003a04                __rt_init_rti_start
- .rti_fn.0.end  0x80003a08        0x4 src/components.o
-                0x80003a08                __rt_init_rti_board_start
- .rti_fn.1.end  0x80003a0c        0x4 src/components.o
-                0x80003a0c                __rt_init_rti_board_end
- .rti_fn.6      0x80003a10        0x4 finsh/shell.o
-                0x80003a10                __rt_init_finsh_system_init
- .rti_fn.6.end  0x80003a14        0x4 src/components.o
-                0x80003a14                __rt_init_rti_end
-                0x80003a18                        __rt_init_end = .
+ .rti_fn.0      0x80003a40        0x4 src/components.o
+                0x80003a40                __rt_init_rti_start
+ .rti_fn.0.end  0x80003a44        0x4 src/components.o
+                0x80003a44                __rt_init_rti_board_start
+ .rti_fn.1.end  0x80003a48        0x4 src/components.o
+                0x80003a48                __rt_init_rti_board_end
+ .rti_fn.6      0x80003a4c        0x4 finsh/shell.o
+                0x80003a4c                __rt_init_finsh_system_init
+ .rti_fn.6.end  0x80003a50        0x4 src/components.o
+                0x80003a50                __rt_init_rti_end
+                0x80003a54                        __rt_init_end = .
 
-.rodata         0x80003a18     0x160c
+.rodata         0x80003a54     0x1644
  *(.rodata .rodata.*)
  .rodata.rt_hw_cpu_shutdown.str1.4
-                0x80003a18      0xdd6 libcpu/cpuport.o
+                0x80003a54      0xe0d libcpu/cpuport.o
                                   0xe (size before relaxing)
- *fill*         0x800047ee        0x2 
+ *fill*         0x80004861        0x3 
  .rodata.__FUNCTION__.0
-                0x800047f0       0x13 libcpu/cpuport.o
+                0x80004864       0x13 libcpu/cpuport.o
  .rodata.rt_hw_trap_handler.str1.4
-                0x80004803        0x0 libcpu/interrupt.o
+                0x80004877        0x0 libcpu/interrupt.o
                                 0x10f (size before relaxing)
  .rodata.rt_application_init.str1.4
-                0x80004803        0x0 src/components.o
+                0x80004877        0x0 src/components.o
                                  0x17 (size before relaxing)
- *fill*         0x80004803        0x1 
+ *fill*         0x80004877        0x1 
  .rodata.__FUNCTION__.0
-                0x80004804       0x14 src/components.o
+                0x80004878       0x14 src/components.o
  .rodata.rt_thread_idle_excute.str1.4
-                0x80004818        0x0 src/idle.o
+                0x8000488c        0x0 src/idle.o
                                  0x2a (size before relaxing)
  .rodata.rt_thread_idle_init.str1.4
-                0x80004818        0x0 src/idle.o
+                0x8000488c        0x0 src/idle.o
                                   0x6 (size before relaxing)
  .rodata.__FUNCTION__.0
-                0x80004818       0x16 src/idle.o
+                0x8000488c       0x16 src/idle.o
  .rodata.rt_sem_init.str1.4
-                0x8000482e        0x0 src/ipc.o
+                0x800048a2        0x0 src/ipc.o
                                  0x21 (size before relaxing)
  .rodata.rt_sem_detach.str1.4
-                0x8000482e        0x0 src/ipc.o
+                0x800048a2        0x0 src/ipc.o
                                  0x77 (size before relaxing)
  .rodata.rt_sem_create.str1.4
-                0x8000482e        0x0 src/ipc.o
+                0x800048a2        0x0 src/ipc.o
                                  0x2a (size before relaxing)
  .rodata.rt_sem_take.str1.4
-                0x8000482e        0x0 src/ipc.o
+                0x800048a2        0x0 src/ipc.o
                                  0x37 (size before relaxing)
- *fill*         0x8000482e        0x2 
+ *fill*         0x800048a2        0x2 
  .rodata.__FUNCTION__.1
-                0x80004830        0xf src/ipc.o
- *fill*         0x8000483f        0x1 
+                0x800048a4        0xf src/ipc.o
+ *fill*         0x800048b3        0x1 
  .rodata.__FUNCTION__.2
-                0x80004840        0xc src/ipc.o
+                0x800048b4        0xc src/ipc.o
  .rodata.__FUNCTION__.6
-                0x8000484c        0xc src/ipc.o
+                0x800048c0        0xc src/ipc.o
  .rodata.rt_vsnprintf.str1.4
-                0x80004858        0x0 src/kservice.o
+                0x800048cc        0x0 src/kservice.o
                                   0x7 (size before relaxing)
  .rodata.rt_vsnprintf
-                0x80004858       0x58 src/kservice.o
+                0x800048cc       0x58 src/kservice.o
  .rodata.rt_show_version.str1.4
-                0x800048b0        0x0 src/kservice.o
+                0x80004924        0x0 src/kservice.o
                                  0x86 (size before relaxing)
  .rodata.rt_assert_handler.str1.4
-                0x800048b0        0x0 src/kservice.o
+                0x80004924        0x0 src/kservice.o
                                  0x37 (size before relaxing)
  .rodata.small_digits.1
-                0x800048b0       0x11 src/kservice.o
- *fill*         0x800048c1        0x3 
+                0x80004924       0x11 src/kservice.o
+ *fill*         0x80004935        0x3 
  .rodata.large_digits.2
-                0x800048c4       0x11 src/kservice.o
- *fill*         0x800048d5        0x3 
+                0x80004938       0x11 src/kservice.o
+ *fill*         0x80004949        0x3 
  .rodata.__lowest_bit_bitmap
-                0x800048d8      0x100 src/kservice.o
-                0x800048d8                __lowest_bit_bitmap
+                0x8000494c      0x100 src/kservice.o
+                0x8000494c                __lowest_bit_bitmap
  .rodata.list_mem.str1.4
-                0x800049d8        0x0 src/mem.o
+                0x80004a4c        0x0 src/mem.o
                                  0x46 (size before relaxing)
  .rodata.plug_holes.str1.4
-                0x800049d8        0x0 src/mem.o
+                0x80004a4c        0x0 src/mem.o
                                  0x5b (size before relaxing)
  .rodata.rt_system_heap_init.str1.4
-                0x800049d8        0x0 src/mem.o
+                0x80004a4c        0x0 src/mem.o
                                  0x6e (size before relaxing)
  .rodata.rt_malloc.str1.4
-                0x800049d8        0x0 src/mem.o
+                0x80004a4c        0x0 src/mem.o
                                  0xc4 (size before relaxing)
  .rodata.rt_free.str1.4
-                0x800049d8        0x0 src/mem.o
+                0x80004a4c        0x0 src/mem.o
                                 0x101 (size before relaxing)
  .rodata.__FUNCTION__.1
-                0x800049d8        0xb src/mem.o
- *fill*         0x800049e3        0x1 
+                0x80004a4c        0xb src/mem.o
+ *fill*         0x80004a57        0x1 
  .rodata.__FUNCTION__.3
-                0x800049e4        0xa src/mem.o
- *fill*         0x800049ee        0x2 
+                0x80004a58        0xa src/mem.o
+ *fill*         0x80004a62        0x2 
  .rodata.__FUNCTION__.4
-                0x800049f0       0x14 src/mem.o
- .rodata.name   0x80004a04       0x29 src/mem.o
-                0x80004a04                __fsym_list_mem_desc
-                0x80004a24                __fsym_list_mem_name
+                0x80004a64       0x14 src/mem.o
+ .rodata.name   0x80004a78       0x29 src/mem.o
+                0x80004a78                __fsym_list_mem_desc
+                0x80004a98                __fsym_list_mem_name
  .rodata.rt_object_init.str1.4
-                0x80004a2d        0x0 src/object.o
+                0x80004aa1        0x0 src/object.o
                                  0x26 (size before relaxing)
  .rodata.rt_object_detach.str1.4
-                0x80004a2d        0x0 src/object.o
+                0x80004aa1        0x0 src/object.o
                                  0x12 (size before relaxing)
  .rodata.rt_object_allocate.str1.4
-                0x80004a2d        0x0 src/object.o
+                0x80004aa1        0x0 src/object.o
                                  0x2a (size before relaxing)
  .rodata.rt_object_delete.str1.4
-                0x80004a2d        0x0 src/object.o
+                0x80004aa1        0x0 src/object.o
                                  0x29 (size before relaxing)
- *fill*         0x80004a2d        0x3 
+ *fill*         0x80004aa1        0x3 
  .rodata.__FUNCTION__.0
-                0x80004a30        0xf src/object.o
- *fill*         0x80004a3f        0x1 
+                0x80004aa4        0xf src/object.o
+ *fill*         0x80004ab3        0x1 
  .rodata.__FUNCTION__.1
-                0x80004a40       0x13 src/object.o
- *fill*         0x80004a53        0x1 
+                0x80004ab4       0x13 src/object.o
+ *fill*         0x80004ac7        0x1 
  .rodata.__FUNCTION__.2
-                0x80004a54       0x1a src/object.o
- *fill*         0x80004a6e        0x2 
+                0x80004ac8       0x1a src/object.o
+ *fill*         0x80004ae2        0x2 
  .rodata.__FUNCTION__.3
-                0x80004a70       0x11 src/object.o
- *fill*         0x80004a81        0x3 
+                0x80004ae4       0x11 src/object.o
+ *fill*         0x80004af5        0x3 
  .rodata.__FUNCTION__.4
-                0x80004a84       0x13 src/object.o
- *fill*         0x80004a97        0x1 
+                0x80004af8       0x13 src/object.o
+ *fill*         0x80004b0b        0x1 
  .rodata.__FUNCTION__.5
-                0x80004a98       0x11 src/object.o
- *fill*         0x80004aa9        0x3 
+                0x80004b0c       0x11 src/object.o
+ *fill*         0x80004b1d        0x3 
  .rodata.__FUNCTION__.6
-                0x80004aac        0xf src/object.o
+                0x80004b20        0xf src/object.o
  .rodata.rt_schedule_insert_thread.str1.4
-                0x80004abb        0x0 src/scheduler.o
+                0x80004b2f        0x0 src/scheduler.o
                                  0x12 (size before relaxing)
- *fill*         0x80004abb        0x1 
+ *fill*         0x80004b2f        0x1 
  .rodata.__FUNCTION__.0
-                0x80004abc       0x1a src/scheduler.o
- *fill*         0x80004ad6        0x2 
+                0x80004b30       0x1a src/scheduler.o
+ *fill*         0x80004b4a        0x2 
  .rodata.__FUNCTION__.1
-                0x80004ad8       0x1a src/scheduler.o
+                0x80004b4c       0x1a src/scheduler.o
  .rodata.rt_thread_timeout.str1.4
-                0x80004af2        0x0 src/thread.o
+                0x80004b66        0x0 src/thread.o
                                  0x92 (size before relaxing)
  .rodata._rt_thread_init.isra.0.str1.4
-                0x80004af2        0x0 src/thread.o
+                0x80004b66        0x0 src/thread.o
                                  0x22 (size before relaxing)
  .rodata.rt_thread_init.str1.4
-                0x80004af2        0x0 src/thread.o
+                0x80004b66        0x0 src/thread.o
                                  0x17 (size before relaxing)
  .rodata.rt_thread_startup.str1.4
-                0x80004af2        0x0 src/thread.o
+                0x80004b66        0x0 src/thread.o
                                  0x37 (size before relaxing)
- *fill*         0x80004af2        0x2 
+ *fill*         0x80004b66        0x2 
  .rodata.__FUNCTION__.1
-                0x80004af4       0x12 src/thread.o
- *fill*         0x80004b06        0x2 
+                0x80004b68       0x12 src/thread.o
+ *fill*         0x80004b7a        0x2 
  .rodata.__FUNCTION__.2
-                0x80004b08       0x11 src/thread.o
- *fill*         0x80004b19        0x3 
+                0x80004b7c       0x11 src/thread.o
+ *fill*         0x80004b8d        0x3 
  .rodata.__FUNCTION__.3
-                0x80004b1c       0x12 src/thread.o
- *fill*         0x80004b2e        0x2 
+                0x80004b90       0x12 src/thread.o
+ *fill*         0x80004ba2        0x2 
  .rodata.__FUNCTION__.5
-                0x80004b30       0x10 src/thread.o
+                0x80004ba4       0x10 src/thread.o
  .rodata.__FUNCTION__.8
-                0x80004b40       0x12 src/thread.o
- *fill*         0x80004b52        0x2 
+                0x80004bb4       0x12 src/thread.o
+ *fill*         0x80004bc6        0x2 
  .rodata.__FUNCTION__.9
-                0x80004b54       0x10 src/thread.o
+                0x80004bc8       0x10 src/thread.o
  .rodata.__FUNCTION__.10
-                0x80004b64        0xf src/thread.o
+                0x80004bd8        0xf src/thread.o
  .rodata.rt_timer_init.str1.4
-                0x80004b73        0x0 src/timer.o
+                0x80004be7        0x0 src/timer.o
                                  0x11 (size before relaxing)
  .rodata.rt_timer_detach.str1.4
-                0x80004b73        0x0 src/timer.o
+                0x80004be7        0x0 src/timer.o
                                  0x66 (size before relaxing)
  .rodata.rt_timer_start.str1.4
-                0x80004b73        0x0 src/timer.o
+                0x80004be7        0x0 src/timer.o
                                  0x23 (size before relaxing)
- *fill*         0x80004b73        0x1 
+ *fill*         0x80004be7        0x1 
  .rodata.__FUNCTION__.0
-                0x80004b74       0x11 src/timer.o
- *fill*         0x80004b85        0x3 
+                0x80004be8       0x11 src/timer.o
+ *fill*         0x80004bf9        0x3 
  .rodata.__FUNCTION__.1
-                0x80004b88        0xe src/timer.o
- *fill*         0x80004b96        0x2 
+                0x80004bfc        0xe src/timer.o
+ *fill*         0x80004c0a        0x2 
  .rodata.__FUNCTION__.3
-                0x80004b98        0xf src/timer.o
- *fill*         0x80004ba7        0x1 
+                0x80004c0c        0xf src/timer.o
+ *fill*         0x80004c1b        0x1 
  .rodata.__FUNCTION__.5
-                0x80004ba8       0x10 src/timer.o
+                0x80004c1c       0x10 src/timer.o
  .rodata.__FUNCTION__.6
-                0x80004bb8        0xe src/timer.o
+                0x80004c2c        0xe src/timer.o
  .rodata.rt_device_unregister.str1.4
-                0x80004bc6        0x0 device/device.o
+                0x80004c3a        0x0 device/device.o
                                  0x74 (size before relaxing)
  .rodata.rt_device_init.str1.4
-                0x80004bc6        0x0 device/device.o
+                0x80004c3a        0x0 device/device.o
                                  0x36 (size before relaxing)
  .rodata.rt_device_open.str1.4
-                0x80004bc6        0x0 device/device.o
+                0x80004c3a        0x0 device/device.o
                                  0x14 (size before relaxing)
- *fill*         0x80004bc6        0x2 
+ *fill*         0x80004c3a        0x2 
  .rodata.__FUNCTION__.1
-                0x80004bc8       0x1a device/device.o
- *fill*         0x80004be2        0x2 
+                0x80004c3c       0x1a device/device.o
+ *fill*         0x80004c56        0x2 
  .rodata.__FUNCTION__.3
-                0x80004be4       0x10 device/device.o
+                0x80004c58       0x10 device/device.o
  .rodata.__FUNCTION__.4
-                0x80004bf4        0xf device/device.o
- *fill*         0x80004c03        0x1 
+                0x80004c68        0xf device/device.o
+ *fill*         0x80004c77        0x1 
  .rodata.__FUNCTION__.5
-                0x80004c04       0x10 device/device.o
+                0x80004c78       0x10 device/device.o
  .rodata.__FUNCTION__.6
-                0x80004c14        0xf device/device.o
+                0x80004c88        0xf device/device.o
  .rodata.rt_hw_board_init.str1.4
-                0x80004c23        0x0 bsp/board.o
+                0x80004c97        0x0 bsp/board.o
                                  0x42 (size before relaxing)
  .rodata.finsh_rx_ind.str1.4
-                0x80004c23        0x0 finsh/shell.o
+                0x80004c97        0x0 finsh/shell.o
                                  0x11 (size before relaxing)
  .rodata.finsh_get_prompt.str1.4
-                0x80004c23        0x0 finsh/shell.o
+                0x80004c97        0x0 finsh/shell.o
                                  0x12 (size before relaxing)
  .rodata.finsh_system_init.str1.4
-                0x80004c23        0x0 finsh/shell.o
+                0x80004c97        0x0 finsh/shell.o
                                  0x25 (size before relaxing)
  .rodata.finsh_set_device.str1.4
-                0x80004c23        0x0 finsh/shell.o
+                0x80004c97        0x0 finsh/shell.o
                                  0x20 (size before relaxing)
  .rodata.finsh_thread_entry.str1.4
-                0x80004c23        0x0 finsh/shell.o
+                0x80004c97        0x0 finsh/shell.o
                                  0x23 (size before relaxing)
- *fill*         0x80004c23        0x1 
+ *fill*         0x80004c97        0x1 
  .rodata.finsh_thread_entry
-                0x80004c24       0x38 finsh/shell.o
+                0x80004c98       0x38 finsh/shell.o
  .rodata.__FUNCTION__.0
-                0x80004c5c        0xe finsh/shell.o
- *fill*         0x80004c6a        0x2 
+                0x80004cd0        0xe finsh/shell.o
+ *fill*         0x80004cde        0x2 
  .rodata.__FUNCTION__.4
-                0x80004c6c        0xd finsh/shell.o
- *fill*         0x80004c79        0x3 
+                0x80004ce0        0xd finsh/shell.o
+ *fill*         0x80004ced        0x3 
  .rodata.__FUNCTION__.5
-                0x80004c7c       0x11 finsh/shell.o
- *fill*         0x80004c8d        0x3 
+                0x80004cf0       0x11 finsh/shell.o
+ *fill*         0x80004d01        0x3 
  .rodata.__FUNCTION__.6
-                0x80004c90       0x16 finsh/shell.o
+                0x80004d04       0x16 finsh/shell.o
  .rodata.hello.str1.4
-                0x80004ca6        0x0 finsh/cmd.o
+                0x80004d1a        0x0 finsh/cmd.o
                                  0x12 (size before relaxing)
  .rodata.list.str1.4
-                0x80004ca6        0x0 finsh/cmd.o
+                0x80004d1a        0x0 finsh/cmd.o
                                  0x25 (size before relaxing)
  .rodata.object_split.constprop.0.str1.4
-                0x80004ca6        0x0 finsh/cmd.o
+                0x80004d1a        0x0 finsh/cmd.o
                                   0x2 (size before relaxing)
  .rodata.list_timer.str1.4
-                0x80004ca6        0x0 finsh/cmd.o
+                0x80004d1a        0x0 finsh/cmd.o
                                  0x9d (size before relaxing)
  .rodata.list_thread.str1.4
-                0x80004ca6        0x0 finsh/cmd.o
+                0x80004d1a        0x0 finsh/cmd.o
                                  0xfc (size before relaxing)
- *fill*         0x80004ca6        0x2 
+ *fill*         0x80004d1a        0x2 
  .rodata.list_thread
-                0x80004ca8       0x14 finsh/cmd.o
+                0x80004d1c       0x14 finsh/cmd.o
  .rodata.list_device.str1.4
-                0x80004cbc        0x0 finsh/cmd.o
+                0x80004d30        0x0 finsh/cmd.o
                                  0x77 (size before relaxing)
  .rodata.list_sem.str1.4
-                0x80004cbc        0x0 finsh/cmd.o
+                0x80004d30        0x0 finsh/cmd.o
                                  0x6c (size before relaxing)
- .rodata.name   0x80004cbc      0x1c6 finsh/cmd.o
-                0x80004cbc                __fsym_list_desc
-                0x80004cd8                __fsym_list_name
-                0x80004ce0                __fsym___cmd_list_device_desc
-                0x80004cf8                __fsym___cmd_list_device_name
-                0x80004d0c                __fsym_list_device_desc
-                0x80004d24                __fsym_list_device_name
-                0x80004d30                __fsym___cmd_list_timer_desc
-                0x80004d48                __fsym___cmd_list_timer_name
-                0x80004d5c                __fsym_list_timer_desc
-                0x80004d74                __fsym_list_timer_name
-                0x80004d80                __fsym___cmd_list_sem_desc
-                0x80004d9c                __fsym___cmd_list_sem_name
-                0x80004dac                __fsym_list_sem_desc
-                0x80004dc8                __fsym_list_sem_name
-                0x80004dd4                __fsym___cmd_list_thread_desc
-                0x80004de0                __fsym___cmd_list_thread_name
-                0x80004df4                __fsym_list_thread_desc
-                0x80004e00                __fsym_list_thread_name
-                0x80004e0c                __fsym___cmd_version_desc
-                0x80004e30                __fsym___cmd_version_name
-                0x80004e40                __fsym_version_desc
-                0x80004e64                __fsym_version_name
-                0x80004e6c                __fsym_hello_desc
-                0x80004e7c                __fsym_hello_name
+ .rodata.name   0x80004d30      0x1c6 finsh/cmd.o
+                0x80004d30                __fsym_list_desc
+                0x80004d4c                __fsym_list_name
+                0x80004d54                __fsym___cmd_list_device_desc
+                0x80004d6c                __fsym___cmd_list_device_name
+                0x80004d80                __fsym_list_device_desc
+                0x80004d98                __fsym_list_device_name
+                0x80004da4                __fsym___cmd_list_timer_desc
+                0x80004dbc                __fsym___cmd_list_timer_name
+                0x80004dd0                __fsym_list_timer_desc
+                0x80004de8                __fsym_list_timer_name
+                0x80004df4                __fsym___cmd_list_sem_desc
+                0x80004e10                __fsym___cmd_list_sem_name
+                0x80004e20                __fsym_list_sem_desc
+                0x80004e3c                __fsym_list_sem_name
+                0x80004e48                __fsym___cmd_list_thread_desc
+                0x80004e54                __fsym___cmd_list_thread_name
+                0x80004e68                __fsym_list_thread_desc
+                0x80004e74                __fsym_list_thread_name
+                0x80004e80                __fsym___cmd_version_desc
+                0x80004ea4                __fsym___cmd_version_name
+                0x80004eb4                __fsym_version_desc
+                0x80004ed8                __fsym_version_name
+                0x80004ee0                __fsym_hello_desc
+                0x80004ef0                __fsym_hello_name
  .rodata.str1.4
-                0x80004e82        0x0 finsh/cmd.o
+                0x80004ef6        0x0 finsh/cmd.o
                                 0x12c (size before relaxing)
- *fill*         0x80004e82        0x2 
+ *fill*         0x80004ef6        0x2 
  .rodata.device_type_str
-                0x80004e84       0x58 finsh/cmd.o
+                0x80004ef8       0x58 finsh/cmd.o
  .rodata.msh_help.str1.4
-                0x80004edc        0x0 finsh/msh.o
+                0x80004f50        0x0 finsh/msh.o
                                  0x32 (size before relaxing)
  .rodata.msh_exec.str1.4
-                0x80004edc        0x0 finsh/msh.o
+                0x80004f50        0x0 finsh/msh.o
                                  0x3c (size before relaxing)
  .rodata.msh_auto_complete.str1.4
-                0x80004edc        0x0 finsh/msh.o
+                0x80004f50        0x0 finsh/msh.o
                                   0x4 (size before relaxing)
- .rodata.name   0x80004edc       0x7f finsh/msh.o
-                0x80004edc                __fsym___cmd_free_desc
-                0x80004f04                __fsym___cmd_free_name
-                0x80004f10                __fsym___cmd_ps_desc
-                0x80004f2c                __fsym___cmd_ps_name
-                0x80004f38                __fsym___cmd_help_desc
-                0x80004f50                __fsym___cmd_help_name
+ .rodata.name   0x80004f50       0x7f finsh/msh.o
+                0x80004f50                __fsym___cmd_free_desc
+                0x80004f78                __fsym___cmd_free_name
+                0x80004f84                __fsym___cmd_ps_desc
+                0x80004fa0                __fsym___cmd_ps_name
+                0x80004fac                __fsym___cmd_help_desc
+                0x80004fc4                __fsym___cmd_help_name
  .rodata.main.str1.4
-                0x80004f5b        0x0 applications/main.o
-                                 0x26 (size before relaxing)
+                0x80004fcf        0x0 applications/main.o
+                                 0x5d (size before relaxing)
  *(.srodata .srodata.*)
- *fill*         0x80004f5b        0x1 
+ *fill*         0x80004fcf        0x1 
  .srodata.__FUNCTION__.0
-                0x80004f5c        0x8 src/mem.o
-                0x80004f64                        . = ALIGN (0x4)
-                0x80004f64                        __fsymtab_start = .
+                0x80004fd0        0x8 src/mem.o
+                0x80004fd8                        . = ALIGN (0x4)
+                0x80004fd8                        __fsymtab_start = .
  *(FSymTab)
- FSymTab        0x80004f64        0xc src/mem.o
-                0x80004f64                __fsym_list_mem
- FSymTab        0x80004f70       0x90 finsh/cmd.o
-                0x80004f70                __fsym_list
-                0x80004f7c                __fsym___cmd_list_device
-                0x80004f88                __fsym_list_device
-                0x80004f94                __fsym___cmd_list_timer
-                0x80004fa0                __fsym_list_timer
-                0x80004fac                __fsym___cmd_list_sem
-                0x80004fb8                __fsym_list_sem
-                0x80004fc4                __fsym___cmd_list_thread
-                0x80004fd0                __fsym_list_thread
-                0x80004fdc                __fsym___cmd_version
-                0x80004fe8                __fsym_version
-                0x80004ff4                __fsym_hello
- FSymTab        0x80005000       0x24 finsh/msh.o
-                0x80005000                __fsym___cmd_free
-                0x8000500c                __fsym___cmd_ps
-                0x80005018                __fsym___cmd_help
-                0x80005024                        __fsymtab_end = .
-                0x80005024                        . = ALIGN (0x4)
-                0x80005024                        __vsymtab_start = .
+ FSymTab        0x80004fd8        0xc src/mem.o
+                0x80004fd8                __fsym_list_mem
+ FSymTab        0x80004fe4       0x90 finsh/cmd.o
+                0x80004fe4                __fsym_list
+                0x80004ff0                __fsym___cmd_list_device
+                0x80004ffc                __fsym_list_device
+                0x80005008                __fsym___cmd_list_timer
+                0x80005014                __fsym_list_timer
+                0x80005020                __fsym___cmd_list_sem
+                0x8000502c                __fsym_list_sem
+                0x80005038                __fsym___cmd_list_thread
+                0x80005044                __fsym_list_thread
+                0x80005050                __fsym___cmd_version
+                0x8000505c                __fsym_version
+                0x80005068                __fsym_hello
+ FSymTab        0x80005074       0x24 finsh/msh.o
+                0x80005074                __fsym___cmd_free
+                0x80005080                __fsym___cmd_ps
+                0x8000508c                __fsym___cmd_help
+                0x80005098                        __fsymtab_end = .
+                0x80005098                        . = ALIGN (0x4)
+                0x80005098                        __vsymtab_start = .
  *(VSymTab)
-                0x80005024                        __vsymtab_end = .
+                0x80005098                        __vsymtab_end = .
 
-.rela.dyn       0x80005024        0x0
+.rela.dyn       0x80005098        0x0
  .rela.text.init
-                0x80005024        0x0 start.o
+                0x80005098        0x0 start.o
  .rela.text.rt_hw_board_init
-                0x80005024        0x0 start.o
+                0x80005098        0x0 start.o
  .rela.text.finsh_system_init
-                0x80005024        0x0 start.o
+                0x80005098        0x0 start.o
 
-.data           0x80005024       0x40
-                0x80005024                        _data_start = .
+.data           0x80005098       0x40
+                0x80005098                        _data_start = .
  *(.data .data.*)
  .data.rt_object_container
-                0x80005024       0x40 src/object.o
-                0x80005864                        PROVIDE (__global_pointer$ = (. + 0x800))
+                0x80005098       0x40 src/object.o
+                0x800058d8                        PROVIDE (__global_pointer$ = (. + 0x800))
  *(.sdata .sdata.*)
-                0x80005064                        _data_end = .
+                0x800050d8                        _data_end = .
 
-.bss            0x80005064      0x610
-                0x80005064                        _bss_start = .
+.bss            0x800050d8      0x610
+                0x800050d8                        _bss_start = .
  *(.bss .bss.*)
  .bss.irq_desc_table
-                0x80005064      0x100 libcpu/interrupt.o
+                0x800050d8      0x100 libcpu/interrupt.o
  .bss.rt_thread_stack
-                0x80005164      0x100 src/idle.o
- .bss.idle      0x80005264       0x78 src/idle.o
+                0x800051d8      0x100 src/idle.o
+ .bss.idle      0x800052d8       0x78 src/idle.o
  .bss.rt_log_buf.0
-                0x800052dc      0x100 src/kservice.o
- .bss.heap_sem  0x800053dc       0x20 src/mem.o
+                0x80005350      0x100 src/kservice.o
+ .bss.heap_sem  0x80005450       0x20 src/mem.o
  .bss.rt_thread_priority_table
-                0x800053fc      0x100 src/scheduler.o
-                0x800053fc                rt_thread_priority_table
+                0x80005470      0x100 src/scheduler.o
+                0x80005470                rt_thread_priority_table
  .bss.finsh_prompt.8
-                0x800054fc      0x101 finsh/shell.o
+                0x80005570      0x101 finsh/shell.o
  *(.sbss .sbss.*)
- *fill*         0x800055fd        0x3 
+ *fill*         0x80005671        0x3 
  .sbss.rt_thread_switch_interrupt_flag
-                0x80005600        0x4 libcpu/cpuport.o
-                0x80005600                rt_thread_switch_interrupt_flag
+                0x80005674        0x4 libcpu/cpuport.o
+                0x80005674                rt_thread_switch_interrupt_flag
  .sbss.rt_interrupt_to_thread
-                0x80005604        0x4 libcpu/cpuport.o
-                0x80005604                rt_interrupt_to_thread
+                0x80005678        0x4 libcpu/cpuport.o
+                0x80005678                rt_interrupt_to_thread
  .sbss.rt_interrupt_from_thread
-                0x80005608        0x4 libcpu/cpuport.o
-                0x80005608                rt_interrupt_from_thread
- .sbss.rt_tick  0x8000560c        0x4 src/clock.o
+                0x8000567c        0x4 libcpu/cpuport.o
+                0x8000567c                rt_interrupt_from_thread
+ .sbss.rt_tick  0x80005680        0x4 src/clock.o
  .sbss.rt_interrupt_nest
-                0x80005610        0x1 src/irq.o
-                0x80005610                rt_interrupt_nest
- *fill*         0x80005611        0x3 
+                0x80005684        0x1 src/irq.o
+                0x80005684                rt_interrupt_nest
+ *fill*         0x80005685        0x3 
  .sbss.rt_assert_hook
-                0x80005614        0x4 src/kservice.o
-                0x80005614                rt_assert_hook
+                0x80005688        0x4 src/kservice.o
+                0x80005688                rt_assert_hook
  .sbss._console_device
-                0x80005618        0x4 src/kservice.o
+                0x8000568c        0x4 src/kservice.o
  .sbss.__rt_errno
-                0x8000561c        0x4 src/kservice.o
- .sbss.max_mem  0x80005620        0x4 src/mem.o
+                0x80005690        0x4 src/kservice.o
+ .sbss.max_mem  0x80005694        0x4 src/mem.o
  .sbss.used_mem
-                0x80005624        0x4 src/mem.o
+                0x80005698        0x4 src/mem.o
  .sbss.mem_size_aligned
-                0x80005628        0x4 src/mem.o
- .sbss.lfree    0x8000562c        0x4 src/mem.o
+                0x8000569c        0x4 src/mem.o
+ .sbss.lfree    0x800056a0        0x4 src/mem.o
  .sbss.heap_end
-                0x80005630        0x4 src/mem.o
+                0x800056a4        0x4 src/mem.o
  .sbss.heap_ptr
-                0x80005634        0x4 src/mem.o
+                0x800056a8        0x4 src/mem.o
  .sbss.rt_thread_defunct
-                0x80005638        0x8 src/scheduler.o
-                0x80005638                rt_thread_defunct
+                0x800056ac        0x8 src/scheduler.o
+                0x800056ac                rt_thread_defunct
  .sbss.rt_thread_ready_priority_group
-                0x80005640        0x4 src/scheduler.o
-                0x80005640                rt_thread_ready_priority_group
+                0x800056b4        0x4 src/scheduler.o
+                0x800056b4                rt_thread_ready_priority_group
  .sbss.rt_current_priority
-                0x80005644        0x1 src/scheduler.o
-                0x80005644                rt_current_priority
- *fill*         0x80005645        0x3 
+                0x800056b8        0x1 src/scheduler.o
+                0x800056b8                rt_current_priority
+ *fill*         0x800056b9        0x3 
  .sbss.rt_current_thread
-                0x80005648        0x4 src/scheduler.o
-                0x80005648                rt_current_thread
+                0x800056bc        0x4 src/scheduler.o
+                0x800056bc                rt_current_thread
  .sbss.rt_scheduler_lock_nest
-                0x8000564c        0x2 src/scheduler.o
- *fill*         0x8000564e        0x2 
+                0x800056c0        0x2 src/scheduler.o
+ *fill*         0x800056c2        0x2 
  .sbss.random_nr.2
-                0x80005650        0x4 src/timer.o
+                0x800056c4        0x4 src/timer.o
  .sbss.rt_timer_list
-                0x80005654        0x8 src/timer.o
+                0x800056c8        0x8 src/timer.o
  .sbss.finsh_prompt_custom
-                0x8000565c        0x4 finsh/shell.o
- .sbss.shell    0x80005660        0x4 finsh/shell.o
-                0x80005660                shell
+                0x800056d0        0x4 finsh/shell.o
+ .sbss.shell    0x800056d4        0x4 finsh/shell.o
+                0x800056d4                shell
  .sbss._sysvar_table_end
-                0x80005664        0x4 finsh/shell.o
-                0x80005664                _sysvar_table_end
+                0x800056d8        0x4 finsh/shell.o
+                0x800056d8                _sysvar_table_end
  .sbss._sysvar_table_begin
-                0x80005668        0x4 finsh/shell.o
-                0x80005668                _sysvar_table_begin
+                0x800056dc        0x4 finsh/shell.o
+                0x800056dc                _sysvar_table_begin
  .sbss._syscall_table_end
-                0x8000566c        0x4 finsh/shell.o
-                0x8000566c                _syscall_table_end
+                0x800056e0        0x4 finsh/shell.o
+                0x800056e0                _syscall_table_end
  .sbss._syscall_table_begin
-                0x80005670        0x4 finsh/shell.o
-                0x80005670                _syscall_table_begin
+                0x800056e4        0x4 finsh/shell.o
+                0x800056e4                _syscall_table_begin
  *(COMMON)
-                0x80005674                        . = ALIGN (0x4)
-                0x80005674                        _bss_end = .
+                0x800056e8                        . = ALIGN (0x4)
+                0x800056e8                        _bss_end = .
 
-.heap           0x80005678     0x4000
-                0x80005678                        __heap_start = .
-                0x80009678                        . = (. + _heap_size)
- *fill*         0x80005678     0x4000 
-                0x80009678                        __heap_end = .
+.heap           0x800056e8     0x4000
+                0x800056e8                        __heap_start = .
+                0x800096e8                        . = (. + _heap_size)
+ *fill*         0x800056e8     0x4000 
+                0x800096e8                        __heap_end = .
 
-.stack          0x80009680     0x2000
-                0x80009680                        __stack_start = .
-                0x8000b680                        . = (. + _stack_size)
- *fill*         0x80009680     0x2000 
-                0x8000b680                        . = ALIGN (0x10)
-                0x8000b680                        __stack_top = .
-                0x8000b680                        _system_ram_end = .
+.stack          0x800096f0     0x2000
+                0x800096f0                        __stack_start = .
+                0x8000b6f0                        . = (. + _stack_size)
+ *fill*         0x800096f0     0x2000 
+                0x8000b6f0                        . = ALIGN (0x10)
+                0x8000b6f0                        __stack_top = .
+                0x8000b6f0                        _system_ram_end = .
 
 /DISCARD/
  *(.eh_frame)
@@ -1428,7 +1428,7 @@ OUTPUT(rtthread.elf elf32-littleriscv)
  .note.GNU-stack
                 0x00000000        0x0 D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/lib\libc.a(libc_a-strcpy.o)
 
-.debug_info     0x00000000     0xde25
+.debug_info     0x00000000     0xde98
  .debug_info    0x00000000      0x3c2 libcpu/cpuport.o
  .debug_info    0x000003c2      0xac2 libcpu/interrupt.o
  .debug_info    0x00000e84      0x440 src/clock.o
@@ -1447,7 +1447,7 @@ OUTPUT(rtthread.elf elf32-littleriscv)
  .debug_info    0x0000a761     0x147a finsh/shell.o
  .debug_info    0x0000bbdb     0x17cb finsh/cmd.o
  .debug_info    0x0000d3a6      0x974 finsh/msh.o
- .debug_info    0x0000dd1a      0x10b applications/main.o
+ .debug_info    0x0000dd1a      0x17e applications/main.o
 
 .debug_abbrev   0x00000000     0x390e
  .debug_abbrev  0x00000000      0x1c6 libcpu/cpuport.o
@@ -1590,7 +1590,7 @@ OUTPUT(rtthread.elf elf32-littleriscv)
  .debug_rnglists
                 0x000009b8       0x13 applications/main.o
 
-.debug_line     0x00000000     0xb1c1
+.debug_line     0x00000000     0xb1df
  .debug_line    0x00000000      0x230 libcpu/cpuport.o
  .debug_line    0x00000230      0x806 libcpu/interrupt.o
  .debug_line    0x00000a36      0x1e1 src/clock.o
@@ -1609,7 +1609,7 @@ OUTPUT(rtthread.elf elf32-littleriscv)
  .debug_line    0x000089ae      0xe7a finsh/shell.o
  .debug_line    0x00009828      0xf5f finsh/cmd.o
  .debug_line    0x0000a787      0x9a4 finsh/msh.o
- .debug_line    0x0000b12b       0x96 applications/main.o
+ .debug_line    0x0000b12b       0xb4 applications/main.o
 
 .debug_str      0x00000000     0x2014
  .debug_str     0x00000000     0x2014 libcpu/cpuport.o

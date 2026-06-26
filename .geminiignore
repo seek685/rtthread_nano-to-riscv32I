@@ -1,0 +1,15 @@
+# 编译产物
+*.o
+*.elf
+*.map
+*.bin
+*.hex
+
+# 临时文件
+*.log
+*.tmp
+
+# QEMU 日志
+qemu*.log
+sd*.log
+serial*.log

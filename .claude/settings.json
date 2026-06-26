@@ -1,10 +1,56 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/111/**)"
+      "Read(//c/Users/111/**)",
+      "Bash(env)",
+      "Bash(powershell.exe -Command \"[System.Environment]::GetEnvironmentVariable\\('ANTHROPIC_AUTH_TOKEN', 'User'\\); [System.Environment]::GetEnvironmentVariable\\('ANTHROPIC_AUTH_TOKEN', 'Machine'\\)\")",
+      "Bash(powershell.exe -Command \"[System.Environment]::SetEnvironmentVariable\\('ANTHROPIC_AUTH_TOKEN', 'sk-569ddeab8fe54d9687aa593727e76bc8', 'User'\\)\")",
+      "Bash(where gemini *)",
+      "Bash(gemini --version)",
+      "Bash(gemini version *)",
+      "Bash(npm list *)",
+      "Bash(cargo install *)",
+      "Bash(gemini --help)",
+      "Bash(npm bin *)",
+      "Bash(ls \"$\\(npm bin -g 2>/dev/null\\)/gemini\"*)",
+      "Bash(powershell.exe -Command \"netsh winhttp show proxy\")",
+      "Bash(reg query *)",
+      "Bash(tasklist)",
+      "Bash(curl -s -o /dev/null -w \"time_total: %{time_total}s\\\\nspeed: %{speed_download} B/s\\\\n\" --proxy http://127.0.0.1:65532 --max-time 10 https://generativelanguage.googleapis.com/v1beta/models)",
+      "Bash(curl -s -o /dev/null -w \"time_total: %{time_total}s\\\\n\" --proxy http://127.0.0.1:65532 --max-time 5 https://www.google.com)",
+      "Bash(curl -s -o /dev/null -w \"DNS: %{time_namelookup}s\\\\nTCP: %{time_connect}s\\\\nTLS: %{time_appconnect}s\\\\nTTFB: %{time_starttransfer}s\\\\nTotal: %{time_total}s\\\\n\" --proxy http://127.0.0.1:65532 --max-time 15 https://generativelanguage.googleapis.com/v1beta/models)",
+      "Bash(curl -s -o /dev/null -w \"DNS: %{time_namelookup}s\\\\nTCP: %{time_connect}s\\\\nTLS: %{time_appconnect}s\\\\nTTFB: %{time_starttransfer}s\\\\nTotal: %{time_total}s\\\\n\" --max-time 10 https://api.deepseek.com/v1/models)",
+      "Bash(curl -s --proxy http://127.0.0.1:65532 \"https://generativelanguage.googleapis.com/v1beta/models?key=$\\(cat ~/.gemini/state.json)",
+      "Bash(cmd.exe /c \"where code\")",
+      "Bash(ls \"/c/Users/111/AppData/Local/Programs/Microsoft VS Code/bin/code.cmd\" 2>/dev/null && echo \"Found user install\" || echo \"Not user install\" *)",
+      "Read(//c/Program Files/Microsoft VS Code/bin/**)",
+      "Bash(powershell.exe -Command 'Get-Process code -ErrorAction SilentlyContinue | Select-Object -First 1 | ForEach-Object { $_.Path }')",
+      "Bash(\"D:/vscode/Microsoft VS Code/bin/code.cmd\" --install-extension google.gemini-cli-vscode-ide-companion)",
+      "Bash(\"D:/vscode/Microsoft VS Code/bin/code.cmd\" --list-extensions)",
+      "Bash(cmd.exe /c \"cmdkey /list\")",
+      "Bash(powershell.exe -Command \"Get-StoredCredential -Target '*gemini*' -ErrorAction SilentlyContinue; Get-StoredCredential -Target '*google*' -ErrorAction SilentlyContinue\")",
+      "Skill(fewer-permission-prompts)",
+      "Skill(fewer-permission-prompts:*)",
+      "Bash(qemu-system-riscv32 *)",
+      "Bash(timeout * qemu-system-riscv32 *)",
+      "Bash(curl -s \"https://api.github.com/repos/forrestchang/andrej-karpathy-skills/contents/\")",
+      "Bash(curl -sL \"https://api.github.com/repos/forrestchang/andrej-karpathy-skills/contents/\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/EXAMPLES.md\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/README.zh.md\")",
+      "Bash(curl -sL \"https://api.github.com/repos/multica-ai/andrej-karpathy-skills/contents/skills\")",
+      "Bash(curl -sL \"https://api.github.com/repos/multica-ai/andrej-karpathy-skills/contents/.claude-plugin\")",
+      "Bash(curl -sL \"https://api.github.com/repos/multica-ai/andrej-karpathy-skills/contents/skills/karpathy-guidelines\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/.claude-plugin/plugin.json\")",
+      "Bash(curl -sL \"https://api.github.com/repos/robertguss/claude-code-toolkit/contents/\")",
+      "Bash(curl -sL \"https://api.github.com/repos/robertguss/claude-code-toolkit/contents/skills\")",
+      "Bash(curl -sL \"https://api.github.com/repos/robertguss/claude-code-toolkit/contents/skills/brainstorm\")",
+      "Bash(curl -sL \"https://api.github.com/repos/robertguss/claude-code-toolkit/contents/skills/code-documenter\")",
+      "Bash(curl -sL \"https://api.github.com/repos/robertguss/claude-code-toolkit/contents/.claude\")",
+      "Bash(where claude *)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\111\\.claude"
+      "C:\\Users\\111\\.claude",
+      "C:\\Users\\111\\AppData\\Roaming\\Code\\User"
     ]
   }
 }

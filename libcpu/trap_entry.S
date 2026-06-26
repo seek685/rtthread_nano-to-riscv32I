@@ -121,6 +121,7 @@ trap_entry:
     /* ---- 上下文切换: 保存当前栈帧，加载目标线程栈帧 ---- */
     STORE   zero, 0(t0)                 /* 清除切换标志 */
 
+    //在上面a1保存的sp指针也就是
     /* 保存当前 sp 到 from_thread->sp */
     la      t0, rt_interrupt_from_thread
     LOAD    t1, 0(t0)                   /* t1 = &from_thread->sp */

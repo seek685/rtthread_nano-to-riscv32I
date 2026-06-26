@@ -74,7 +74,15 @@ rt_hw_context_switch:
      */
     addi  sp,  sp, -32 * REGBYTES
     STORE sp,  (a0)
-
+    /**把当前sp指向a0所在的内存区域
+        a0所在的内存区域就是当前from线程的sp
+        a1就是to线程所在的sp
+        在scheduler.c定义传入的两个参数就是
+         rt_hw_context_switch(
+        (rt_ubase_t)&from_thread->sp,   // → a0
+        (rt_ubase_t)&to_thread->sp      // → a1
+        );
+    **/
     STORE x1,   0 * REGBYTES(sp)
     STORE x1,   1 * REGBYTES(sp)
 
@@ -152,6 +160,7 @@ rt_hw_context_switch_interrupt:
 
 .global rt_hw_context_switch_exit
 rt_hw_context_switch_exit:
+
 #ifdef RT_USING_SMP
 #ifdef RT_USING_SIGNALS
     mv a0, sp
@@ -168,6 +177,7 @@ rt_hw_context_switch_exit:
     mv sp, a0
 #endif
 #endif
+
     /* resw ra to mepc */
     LOAD a0,   0 * REGBYTES(sp)
     csrw mepc, a0
@@ -177,6 +187,7 @@ rt_hw_context_switch_exit:
     li    t0, 0x00001800
     csrs  mstatus, t0
     LOAD a0,   2 * REGBYTES(sp)
+    //把此前入栈的mstatus置位回来
     csrs mstatus, a0
 
     LOAD x4,   4 * REGBYTES(sp)

@@ -10,8 +10,12 @@
 int main(void)
 {
     /* 示例: 闪烁 LED 或打印信息 */
-    rt_kprintf("Hello, RT-Thread Nano on RISC-V 32I!\n");
-
+    rt_kprintf("timer init!\n");
+    rt_kprintf("system init!\n");
+    rt_kprintf("app init!\n");
+    rt_kprintf("timer thread init!\n");
+    rt_kprintf("idle init!\n");
+    rt_kprintf("schedule start!\n");
     while (1)
     {
         rt_thread_mdelay(1000);
