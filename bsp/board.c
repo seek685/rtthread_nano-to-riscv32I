@@ -9,6 +9,7 @@
 #include <rtthread.h>
 #include <rthw.h>
 #include "board.h"
+#include "uart_irq.h"
 
 /* 链接脚本 (link.ld) 中定义的符号 */
 extern unsigned char __heap_start;
@@ -36,6 +37,9 @@ void rt_hw_board_init(void)
 
     /* ---- 2. 系统堆 ---- */
     rt_system_heap_init(HEAP_BEGIN, HEAP_END);
+
+    /* ---- 3. UART 中断接收 ---- */
+    uart_irq_init();
 
 #ifdef RT_USING_CONSOLE
     /* NS16550A UART 无需软件初始化，直接可用 */

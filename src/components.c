@@ -30,6 +30,7 @@
  * 组件自动初始化顺序（通过 INIT_EXPORT 宏将函数指针放入指定段）:
  *
  *   rti_start         --> 0        (初始化起始标记)
+ *   rti_board_start   --> 0.end    (板级初始化起始标记)
  *   BOARD_EXPORT      --> 1        (板级硬件初始化)
  *   rti_board_end     --> 1.end    (板级初始化结束标记)
  *

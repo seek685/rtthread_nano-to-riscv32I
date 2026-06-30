@@ -98,7 +98,8 @@ C_SRC      += src/clock.c \
 C_SRC      += device/device.c
 
 # 板级支持包
-C_SRC      += bsp/board.c
+C_SRC      += bsp/board.c \
+              bsp/uart_irq.c
 
 # FinSH 命令行
 C_SRC      += finsh/shell.c \
