@@ -20,6 +20,7 @@ _start:
     .option pop
 
     la      sp, __stack_top
+    csrw    mscratch,sp
 
     /*  清零 .bss 段 */
     la      t0, _bss_start

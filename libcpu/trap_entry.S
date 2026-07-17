@@ -26,7 +26,13 @@
 
     .globl  trap_entry
 trap_entry:
-    /* ====== 第 1 步: 在栈上分配 32 条目帧 ====== */
+    /* ====== 第 1 步: 切换到系统栈，分配 32 条目帧 ====== */
+    /*
+     * csrrw 原子交换 sp ↔ mscratch:
+     *   执行后: sp = __stack_top (系统栈顶), mscratch = 被中断线程的 sp
+     *   mscratch 充当"线程 sp 保险箱"，整个 ISR 期间线程 sp 存在这里
+     */
+    csrrw   sp, mscratch, sp
     addi    sp, sp, -32 * REGBYTES
 
     /*
@@ -116,33 +122,63 @@ trap_entry:
     /* ====== 第 5 步: 检查 ISR 是否触发了上下文切换 ====== */
     la      t0, rt_thread_switch_interrupt_flag
     LOAD    t1, 0(t0)
-    beqz    t1, 1f                      /* 无切换 → 直接恢复 */
+    beqz    t1, 2f                      /* 无切换 → 直接恢复 */
 
-    /* ---- 上下文切换: 保存当前栈帧，加载目标线程栈帧 ---- */
+    /* ---- 上下文切换 ---- */
     STORE   zero, 0(t0)                 /* 清除切换标志 */
 
-    //在上面a1保存的sp指针也就是
-    /* 保存当前 sp 到 from_thread->sp */
+    /*
+     * 将中断帧从系统栈复制到被中断线程的栈上:
+     *   - mscratch 保存了线程 sp（入口 csrrw 写入）
+     *   - 先在线程栈上分配 128 字节，再把 32 字从系统栈搬过去
+     *   - 结果: 线程栈上有一份完整的寄存器快照，系统栈腾空可复用
+     */
+    csrr    t2, mscratch                /* t2 = 被中断线程的 sp */
+    addi    t2, t2, -32 * REGBYTES      /* 在线程栈上分配帧空间 */
+
+    /* from_thread->sp = 线程栈帧指针（符合 RT-Thread 约定） */
     la      t0, rt_interrupt_from_thread
     LOAD    t1, 0(t0)                   /* t1 = &from_thread->sp */
-    STORE   sp, 0(t1)                   /* from_thread->sp = 当前帧指针 */
+    STORE   t2, 0(t1)                   /* from_thread->sp = 线程栈帧 */
 
-    /* 加载 to_thread->sp */
+    /* 复制 32 寄存器字: 系统栈(sp) → 线程栈(t2) */
+    li      t3, 32                      /* 计数器 */
+    mv      t4, sp                      /* 源指针 */
+    mv      t5, t2                      /* 目标指针 */
+1:
+    LOAD    t6, 0(t4)
+    STORE   t6, 0(t5)
+    addi    t4, t4, REGBYTES
+    addi    t5, t5, REGBYTES
+    addi    t3, t3, -1
+    bnez    t3, 1b
+
+    /* 帧已复制，释放系统栈 */
+    addi    sp, sp, 32 * REGBYTES       /* sp 回到 __stack_top */
+
+    /* 切换到目标线程 */
     la      t0, rt_interrupt_to_thread
-    LOAD    t1, 0(t0)                   /* t1 = &to_thread->sp */
-    LOAD    sp, 0(t1)                   /* sp = 目标线程的帧指针 */
+    LOAD    t1, 0(t0)
+    LOAD    t2, 0(t1)                   /* t2 = to_thread->sp（线程栈帧指针） */
+    mv      sp, t2                      /* sp = 目标线程的帧 */
 
     /*
-     * 此时 sp 指向:
-     *   - 被中断线程的帧（无切换）
-     *   - 另一个线程的帧（切换发生）
-     *   - 新线程的初始帧（rt_hw_stack_init 构建）
-     *
-     * 跳转到 context_gcc.S 中的公共恢复路径:
-     * rt_hw_context_switch_exit 从 sp 指向的 32 条目帧中
-     * 恢复全部寄存器，然后执行 mret。
+     * 重置 mscratch = 系统栈顶。
+     * 下次中断时入口 csrrw 需要读到正确的系统栈地址。
+     * （这里可以放心改 t3 —— 等进入 rt_hw_context_switch_exit 后
+     *  会从目标线程帧中恢复 t3 的正确值，不会被破坏。）
      */
-1:
+    la      t3, __stack_top
+    csrw    mscratch, t3
+
+    /* 目标帧在线程栈上，走标准恢复（无需 csrrw） */
     j       rt_hw_context_switch_exit
+
+2:
+    /*
+     * 无切换路径: 帧在系统栈上，sp 未改变。
+     * 走中断专用出口 —— 先恢复寄存器，再 csrrw 换回线程 sp。
+     */
+    j       rt_hw_interrupt_exit
 
     .size   trap_entry, . - trap_entry

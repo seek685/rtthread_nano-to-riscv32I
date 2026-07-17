@@ -47,7 +47,8 @@ INC_DIRS    = -I include \
               -I bsp \
               -I applications \
               -I finsh \
-              -I device
+              -I device \
+              -I coremark
 
 CFLAGS      = $(ARCH_FLAGS) $(SSP_FLAGS) \
               -Wall -Wextra \
@@ -104,17 +105,27 @@ C_SRC      += bsp/board.c \
 # FinSH 命令行
 C_SRC      += finsh/shell.c \
               finsh/cmd.c \
-			  finsh/finsh_port.c \
+              finsh/finsh_port.c \
               finsh/msh.c
 
 # 应用程序源文件
 C_SRC      += applications/main.c
 
+# CoreMark 基准测试源文件
+COREMARK_SRC  = coremark/core_main.c \
+                coremark/core_list_join.c \
+                coremark/core_matrix.c \
+                coremark/core_state.c \
+                coremark/core_util.c \
+                coremark/core_portme.c \
+                coremark/ee_printf.c
+
 # ============== 目标文件 ==============
 
 S_OBJ       = $(S_SRC:.S=.o)
 C_OBJ       = $(C_SRC:.c=.o)
-OBJS        = $(S_OBJ) $(C_OBJ)
+COREMARK_OBJ = $(COREMARK_SRC:.c=.o)
+OBJS        = $(S_OBJ) $(C_OBJ) $(COREMARK_OBJ)
 
 # ============== 输出文件 ==============
 
@@ -143,6 +154,18 @@ $(TARGET): $(OBJS)
 	@echo "  编译    $<"
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# CoreMark 文件用 -O2 以获得有代表性的跑分分数
+coremark/%.o: coremark/%.c
+	@echo "  编译    $<  [CoreMark -O2]"
+	$(CC) $(ARCH_FLAGS) $(SSP_FLAGS) \
+	      -Wall -Wextra \
+	      -O2 -g \
+	      -ffunction-sections -fdata-sections \
+	      -fno-builtin \
+	      $(INC_DIRS) -I coremark \
+	      -D__RTTHREAD__ \
+	      -c $< -o $@
+
 # ============== 辅助目标 ==============
 
 bin: $(TARGET)
@@ -161,7 +184,7 @@ size: $(TARGET)
 	$(SIZE) $(TARGET)
 
 clean:
-	rm -f $(OBJS) $(TARGET) $(TARGET_BIN) $(TARGET_HEX) rtthread.map rtthread.dump *.d libcpu/*.d bsp/*.d src/*.d finsh/*.d device/*.d applications/*.d
+	rm -f $(OBJS) $(TARGET) $(TARGET_BIN) $(TARGET_HEX) rtthread.map rtthread.dump *.d libcpu/*.d bsp/*.d src/*.d finsh/*.d device/*.d applications/*.d coremark/*.d
 	@echo "清理完成。"
 
 

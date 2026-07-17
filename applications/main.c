@@ -35,6 +35,10 @@ void rtthread1_entry(void *parameter){
         sum=0;
     }
 }
+void rtthread2_entry(void *parameter){
+    extern int coremark_main(int argc,char*argv[]);
+    coremark_main(0,RT_NULL);
+}
 int simple_add(void){
     rt_thread_t thread1;
 
@@ -44,5 +48,18 @@ int simple_add(void){
         rt_thread_startup(thread1);
     }
 }
+int core_mark(int argc,char *argv){
+    rt_thread_t thread2;
+
+    thread2=rt_thread_create("thread2",rtthread2_entry,RT_NULL,4096,25,10);
+
+    if(thread2!=RT_NULL){
+        rt_thread_startup(thread2);
+    }
+    else{
+        rt_kprintf("coremark线程创建失败");
+    }
+}
 
 MSH_CMD_EXPORT(simple_add,simple add);
+MSH_CMD_EXPORT(core_mark,coremark);

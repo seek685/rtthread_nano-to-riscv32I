@@ -159,6 +159,7 @@ rt_hw_context_switch_interrupt:
 #endif
 
 .global rt_hw_context_switch_exit
+.global rt_hw_interrupt_exit
 rt_hw_context_switch_exit:
 
 #ifdef RT_USING_SMP
@@ -219,5 +220,69 @@ rt_hw_context_switch_exit:
     LOAD x30, 30 * REGBYTES(sp)
     LOAD x31, 31 * REGBYTES(sp)
 
-    addi sp,  sp, 32 * REGBYTES
+    addi     sp,  sp, 32 * REGBYTES
+    mret
+
+rt_hw_interrupt_exit:
+
+#ifdef RT_USING_SMP
+#ifdef RT_USING_SIGNALS
+    mv a0, sp
+
+    csrr  t0, mhartid
+    /* switch interrupt stack of current cpu */
+    la    sp, __stack_start__
+    addi  t1, t0, 1
+    li    t2, __STACKSIZE__
+    mul   t1, t1, t2
+    add   sp, sp, t1 /* sp = (cpuid + 1) * __STACKSIZE__ + __stack_start__ */
+
+    call rt_signal_check
+    mv sp, a0
+#endif
+#endif
+
+    /* resw ra to mepc */
+    LOAD a0,   0 * REGBYTES(sp)
+    csrw mepc, a0
+
+    LOAD x1,   1 * REGBYTES(sp)
+
+    li    t0, 0x00001800
+    csrs  mstatus, t0
+    LOAD a0,   2 * REGBYTES(sp)
+    //把此前入栈的mstatus置位回来
+    csrs mstatus, a0
+
+    LOAD x4,   4 * REGBYTES(sp)
+    LOAD x5,   5 * REGBYTES(sp)
+    LOAD x6,   6 * REGBYTES(sp)
+    LOAD x7,   7 * REGBYTES(sp)
+    LOAD x8,   8 * REGBYTES(sp)
+    LOAD x9,   9 * REGBYTES(sp)
+    LOAD x10, 10 * REGBYTES(sp)
+    LOAD x11, 11 * REGBYTES(sp)
+    LOAD x12, 12 * REGBYTES(sp)
+    LOAD x13, 13 * REGBYTES(sp)
+    LOAD x14, 14 * REGBYTES(sp)
+    LOAD x15, 15 * REGBYTES(sp)
+    LOAD x16, 16 * REGBYTES(sp)
+    LOAD x17, 17 * REGBYTES(sp)
+    LOAD x18, 18 * REGBYTES(sp)
+    LOAD x19, 19 * REGBYTES(sp)
+    LOAD x20, 20 * REGBYTES(sp)
+    LOAD x21, 21 * REGBYTES(sp)
+    LOAD x22, 22 * REGBYTES(sp)
+    LOAD x23, 23 * REGBYTES(sp)
+    LOAD x24, 24 * REGBYTES(sp)
+    LOAD x25, 25 * REGBYTES(sp)
+    LOAD x26, 26 * REGBYTES(sp)
+    LOAD x27, 27 * REGBYTES(sp)
+    LOAD x28, 28 * REGBYTES(sp)
+    LOAD x29, 29 * REGBYTES(sp)
+    LOAD x30, 30 * REGBYTES(sp)
+    LOAD x31, 31 * REGBYTES(sp)
+
+    addi     sp,  sp, 32 * REGBYTES
+    csrrw    sp,mscratch,sp
     mret
