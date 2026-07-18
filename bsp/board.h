@@ -23,7 +23,8 @@ extern "C" {
 
 /** CPU 主频 (Hz) —— 根据你的平台修改 */
 #define CPU_FREQ                    50000000UL  /* 50 MHz */
-
+/** CLINT mtime 定时器频率 (Hz) —— QEMU virt 为 10 MHz，通常不等于 CPU 主频 */
+#define MTIME_FREQ                  10000000UL
 /** 外设总线频率 (Hz) —— 通常与 CPU_FREQ 相同 */
 #define BUS_FREQ                    CPU_FREQ
 

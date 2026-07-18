@@ -22,8 +22,8 @@ static struct rt_irq_desc irq_desc_table[MAX_IRQ_SOURCES];
 
 /* ============== 系统节拍配置 ============== */
 
-/** 每个系统节拍对应的 CPU 时钟周期数 */
-#define TICK_CYCLES     (CPU_FREQ / RT_TICK_PER_SECOND)
+/** 每个系统节拍对应的 mtime 计数增量（mtime 频率 / 每秒节拍数） */
+#define TICK_CYCLES     (MTIME_FREQ / RT_TICK_PER_SECOND)
 
 /* ============== 前向声明 ============== */
 

@@ -36,7 +36,7 @@ volatile ee_s32 seed5_volatile = 0;
 CORETIMETYPE
 barebones_clock()
 {
-    return __read_mcycle64();   // 返回 64 位 mcycle 值
+    return __read_mtime64();    // 返回 64 位 mtime 值（CLINT MMIO）
     /* 你必须实现一个测量时间的方法!
      * 此函数应返回当前时间。 */
 }

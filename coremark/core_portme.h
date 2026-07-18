@@ -84,19 +84,25 @@ typedef unsigned long long   CORETIMETYPE;
 typedef CORETIMETYPE         CORE_TICKS;
 
 
-static inline unsigned long long __read_mcycle64(void) {
+/* 读取 CLINT 的 mtime（MMIO，非 CSR）。
+ * RV32 上拆成高低两个 32 位寄存器，用 hi-lo-hi 三遍读防回卷。 */
+static inline unsigned long long __read_mtime64(void) {
+    volatile unsigned long *mtime_lo =
+        (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIME_OFFSET);
+    volatile unsigned long *mtime_hi =
+        (volatile unsigned long *)(CLINT_BASE_ADDR + CLINT_MTIME_OFFSET + 4);
     unsigned long hi1, lo, hi2;
     do {
-        hi1 = read_csr(mcycleh);
-        lo  = read_csr(mcycle);
-        hi2 = read_csr(mcycleh);
+        hi1 = *mtime_hi;
+        lo  = *mtime_lo;
+        hi2 = *mtime_hi;
     } while (hi1 != hi2);
     return ((unsigned long long)hi1 << 32) | lo;
 }
 
-#define GETMYTIME(_t)        (*_t = __read_mcycle64())
+#define GETMYTIME(_t)        (*_t = __read_mtime64())
 #define MYTIMEDIFF(fin, ini) ((fin) - (ini))
-#define EE_TICKS_PER_SEC     CPU_FREQ        // 50000000
+#define EE_TICKS_PER_SEC     MTIME_FREQ       /* mtime 实际频率，不是 CPU 频率 */
 #define TIMER_RES_DIVIDER    1
 /* SEED_METHOD — 定义获取种子的方法 (种子无法在编译期计算)
  *
@@ -178,7 +184,7 @@ void portable_fini(core_portable *p);
 
 /* ===== 运行模式 ===== */
 #ifndef ITERATIONS
-#define ITERATIONS         1000    /**起始值，首次跑后按时间调优**/ 
+#define ITERATIONS         50000   /**按 QEMU 实测 0.28s/1000 次推算，≥10 秒需要约 3.6 万次，取 5 万留余量**/
 #endif
 
 #if !defined(PROFILE_RUN) && !defined(PERFORMANCE_RUN) \
