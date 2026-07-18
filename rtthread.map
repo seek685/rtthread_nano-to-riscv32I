@@ -1380,7 +1380,7 @@ LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-ris
  .rela.text.finsh_system_init
                 0x80007620        0x0 start.o
 
-.data           0x80007620       0x50
+.data           0x80007620       0x4c
                 0x80007620                        _data_start = .
  *(.data .data.*)
  .data.rt_object_container
@@ -1391,15 +1391,12 @@ LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-ris
  .sdata.default_num_contexts
                 0x80007664        0x4 coremark/core_portme.o
                 0x80007664                default_num_contexts
- .sdata.seed4_volatile
-                0x80007668        0x4 coremark/core_portme.o
-                0x80007668                seed4_volatile
  .sdata.seed3_volatile
-                0x8000766c        0x4 coremark/core_portme.o
-                0x8000766c                seed3_volatile
-                0x80007670                        _data_end = .
+                0x80007668        0x4 coremark/core_portme.o
+                0x80007668                seed3_volatile
+                0x8000766c                        _data_end = .
 
-.bss            0x80007670      0x69c
+.bss            0x80007670      0x6a0
                 0x80007670                        _bss_start = .
  *(.bss .bss.*)
  .bss.irq_desc_table
@@ -1499,15 +1496,18 @@ LOAD D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-ris
  .sbss.seed5_volatile
                 0x80007d00        0x4 coremark/core_portme.o
                 0x80007d00                seed5_volatile
- .sbss.seed2_volatile
+ .sbss.seed4_volatile
                 0x80007d04        0x4 coremark/core_portme.o
-                0x80007d04                seed2_volatile
- .sbss.seed1_volatile
+                0x80007d04                seed4_volatile
+ .sbss.seed2_volatile
                 0x80007d08        0x4 coremark/core_portme.o
-                0x80007d08                seed1_volatile
+                0x80007d08                seed2_volatile
+ .sbss.seed1_volatile
+                0x80007d0c        0x4 coremark/core_portme.o
+                0x80007d0c                seed1_volatile
  *(COMMON)
-                0x80007d0c                        . = ALIGN (0x4)
-                0x80007d0c                        _bss_end = .
+                0x80007d10                        . = ALIGN (0x4)
+                0x80007d10                        _bss_end = .
 
 .heap           0x80007d10     0x4000
                 0x80007d10                        __heap_start = .

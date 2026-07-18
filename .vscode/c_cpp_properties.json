@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "RISC-V 32I RT-Thread Nano",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/libcpu",
+                "${workspaceFolder}/bsp",
+                "${workspaceFolder}/applications",
+                "${workspaceFolder}/finsh",
+                "${workspaceFolder}/device",
+                "${workspaceFolder}/coremark"
+            ],
+            "defines": [
+                "__RTTHREAD__",
+                "ARCH_RISCV32",
+                "RT_USING_HEAP",
+                "RT_USING_SMALL_MEM",
+                "RT_USING_SEMAPHORE",
+                "RT_USING_DEVICE",
+                "RT_USING_CONSOLE",
+                "RT_USING_FINSH",
+                "RT_USING_COMPONENTS_INIT",
+                "RT_USING_USER_MAIN",
+                "RT_DEBUG"
+            ],
+            "compilerPath": "D:/RISCV-none-elf-gcc/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64/xpack-riscv-none-elf-gcc-15.2.0-1/bin/riscv-none-elf-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-riscv32",
+            "compilerArgs": [
+                "-march=rv32imac_zicsr",
+                "-mabi=ilp32"
+            ]
+        }
+    ],
+    "version": 4
+}

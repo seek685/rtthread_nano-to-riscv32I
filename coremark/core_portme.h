@@ -184,7 +184,7 @@ void portable_fini(core_portable *p);
 
 /* ===== 运行模式 ===== */
 #ifndef ITERATIONS
-#define ITERATIONS         50000   /**按 QEMU 实测 0.28s/1000 次推算，≥10 秒需要约 3.6 万次，取 5 万留余量**/
+#define ITERATIONS         0       /** 0 表示由 core_main.c 自动校准到约 10 秒 **/
 #endif
 
 #if !defined(PROFILE_RUN) && !defined(PERFORMANCE_RUN) \
